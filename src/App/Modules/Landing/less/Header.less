@@ -1,0 +1,88 @@
+.Header {
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Nav {
+  display: grid;
+  grid-area: nav;
+  grid-template-columns: repeat(4, 150px);
+  align-items: center;
+  margin-left: auto;
+
+  a {
+    color: @primary-color;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.5s;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      color: @link-color-hover;
+    }
+  }
+}
+
+.Burger {
+  display: none;
+  grid-area: burger;
+  margin: 0 20px 0 0;
+  padding: 0;
+  justify-self: end;
+  font-size: 40px;
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.Burger:active {
+  transform: rotate(90deg);;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .Nav {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: none;
+    grid-row-gap: 20px;
+
+    padding: 30px 0 30px;
+    background: #fff;
+    box-shadow: 0 9px 9px 0px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 100%;
+    text-align: center;
+
+    &.active {
+      margin-right: 0;
+    }
+  }
+
+  .Burger {
+    cursor: pointer;
+    display: inline;
+  }
+}
+
+.NavAnimation-enter {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+.NavAnimation-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 350ms, transform 350ms;
+}
+.NavAnimation-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.NavAnimation-exit-active {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 350ms, transform 350ms;
+}

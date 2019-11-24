@@ -1,0 +1,16 @@
+.Navbar {
+  position: fixed;
+  top: 0; /* Stick it to the top */
+  max-height: 70px;
+  width: 100vw;
+
+  position: relative;
+
+  display: grid;
+  grid-template-areas: "logo nav";
+
+  @media (max-width: 768px) {
+    grid-template-areas: "logo burger" "nav nav";
+    justify-items: right;
+  }
+}

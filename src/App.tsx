@@ -1,12 +1,9 @@
 import React from 'react';
-import { Button } from 'antd';
-import './App.css';
-
+import Landing from './App/Modules/Landing';
 const App: React.FC = () => {
+  
   return (
-    <div className="App">
-        <Button type="primary">Button</Button>
-      </div>
+    <Landing />
   );
 }
 
