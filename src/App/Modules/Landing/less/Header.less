@@ -1,6 +1,16 @@
 .Header {
-  background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
+  z-index: 999999;
+  height: 70px;
+
+  @media (max-width: 768px) {
+    background: #fff;
+  }
 }
 
 .Nav {
@@ -9,6 +19,7 @@
   grid-template-columns: repeat(4, 150px);
   align-items: center;
   margin-left: auto;
+  position: relative;
 
   a {
     color: @primary-color;
@@ -56,6 +67,7 @@
     border-bottom-right-radius: 5px;
     width: 100%;
     text-align: center;
+    z-index: 99999;
 
     &.active {
       margin-right: 0;
