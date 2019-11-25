@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from './Navbar';
 import './less/Header.less';
 
-
 const LandingHeader = () => {
 
   return (
