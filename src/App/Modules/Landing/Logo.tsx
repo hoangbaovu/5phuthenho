@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
 import './less/Logo.less';
 
 type Props = {
@@ -7,10 +8,19 @@ type Props = {
 }
 
 const Logo = ({title, image}: Props) => {
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
-    <a href="/" className="Logo" >
+    <Link
+      to="/"
+      className="Logo"
+      onClick={scrollToTop}
+    >
       <img src={image} alt={title} />
-    </a>
+    </Link>
   )
 };
 

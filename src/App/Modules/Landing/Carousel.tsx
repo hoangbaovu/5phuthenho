@@ -6,10 +6,14 @@ import './less/Carousel.less'
 const { Element } = BannerAnim;
 const BgElement = Element.BgElement;
 
-const LandingCarousel = () => {
+type Props = {
+  id: string
+}
+
+const LandingCarousel = ({ id }: Props) => {
 
   return (
-    <div className="carousel">
+    <div className="carousel" id={id}>
       <div className="container">
         <BannerAnim autoPlay>
           <Element key="aaa"

@@ -2,9 +2,13 @@ import React from 'react';
 import { HeaderTitle } from '../Shared/HeaderTitle';
 import './less/Rules.less';
 
-const LandingRules = () => {
+type Props = {
+  id: string
+}
+
+const LandingRules = ({ id }: Props) => {
   return (
-    <div className="Rules">
+    <div className="Rules" id={id}>
       <div className="container">
         <HeaderTitle title="Thể lệ" />
         <p className="Rules__content">

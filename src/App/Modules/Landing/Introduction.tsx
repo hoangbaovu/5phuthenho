@@ -2,9 +2,13 @@ import React from 'react';
 import { HeaderTitle } from '../Shared/HeaderTitle';
 import './less/Introduction.less';
 
-const LandingIntroduction = () => {
+type Props = {
+  id: string
+}
+
+const LandingIntroduction = ({ id }: Props) => {
   return (
-    <div className="introduction">
+    <div className="introduction" id={id}>
       <div className="container">
         <HeaderTitle title="Giới thiệu" />
         <p className="introduction__content">

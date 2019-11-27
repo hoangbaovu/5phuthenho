@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-scroll";
+
 import { Icon } from 'antd';
 
 import { CSSTransition } from 'react-transition-group';
@@ -33,7 +35,10 @@ const Navbar = () => {
 
   return (
     <div className="Navbar">
-      <Logo title="Logo" image={require("../../../assets/logo.png")} />
+      <Logo
+        title="Logo"
+        image={require("../../../assets/logo.png")}
+      />
       <CSSTransition
         in={!isSmallScreen || isNavVisible}
         timeout={350}
@@ -41,10 +46,46 @@ const Navbar = () => {
         unmountOnExit
       >
         <nav className={`Nav ${isNavVisible && 'active'}`}>
-          <a href="/">Giới thiệu</a>
-          <a href="/">Thể lệ</a>
-          <a href="/">Lover</a>
-          <a href="/">Liên hệ</a>
+          <Link
+            activeClass="active"
+            to="introduction"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {500}
+          >
+            Giới thiệu
+          </Link>
+          <Link
+            activeClass="active"
+            to="rules"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {500}
+          >
+            Thể lệ
+          </Link>
+          <Link
+            activeClass="active"
+            to="lover"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {500}
+          >
+            Lover
+          </Link>
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {500}
+          >
+            Liên hệ
+          </Link>
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="Burger">

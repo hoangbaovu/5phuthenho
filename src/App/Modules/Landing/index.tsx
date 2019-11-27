@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Row, Col } from 'antd';
+import { Layout } from 'antd';
 import LandingHeader from './Header';
 import LandingBanner from './Banner';
 import LandingIntroduction from './Introduction';
@@ -13,9 +13,9 @@ const Landing = () => (
     <LandingHeader />
     <LandingBanner />
     <Content>
-      <LandingIntroduction />
-      <LandingCarousel />
-      <LandingRules />
+      <LandingIntroduction id="introduction" />
+      <LandingCarousel id="carousel" />
+      <LandingRules id="rules" />
     </Content>
     <Footer style={{ textAlign: 'center' }}>©2019 Made with &lt;3 <a href="//fb.com/baobinhaquarius" target="_blank" rel="noopener noreferrer">Bảo Bình - Aquarius</a></Footer>
   </Layout>
