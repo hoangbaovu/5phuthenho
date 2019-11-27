@@ -7,6 +7,19 @@
   margin-bottom: 80px;
 
   a {
+    position: relative;
+
+    &:after {
+      content:'';
+      background: url('../../../../assets/bg-love.png') no-repeat;
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      width: 109px;
+      height: 160px;
+      transform: translateX(-50%);
+    }
+
     &:hover {
       color: @link-color-hover;
     }
