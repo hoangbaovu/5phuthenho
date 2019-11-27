@@ -15,8 +15,18 @@
   }
 
   a {
+    color: @link-color-hover;
+    padding: 18px;
+    border-bottom: 5px solid transparent;
+
+    &:hover {
+      color: @link-color-hover;
+      border-bottom: 5px solid @link-color-hover;
+    }
+
     &.active {
-      color: #000;
+      color: @link-color-hover;
+      border-bottom: 5px solid @link-color-hover;
     }
   }
 }
