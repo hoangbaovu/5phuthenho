@@ -18,7 +18,7 @@ return (
       <LandingCarousel id="carousel" />      
       <LandingRules id="rules" />
     </Content>
-    <Footer style={{ textAlign: 'center' }}>©2019 Made with &lt;3 <a href="//fb.com/baobinhaquarius" target="_blank" rel="noopener noreferrer">Bảo Bình - Aquarius</a></Footer>
+    <Footer style={{ textAlign: 'center' }}>©2019 Made with &lt;3 by <a href="//fb.com/baobinhaquarius" target="_blank" rel="noopener noreferrer">Bảo Bình - Aquarius</a></Footer>
   </Layout>
 )};
 
