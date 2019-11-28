@@ -8,17 +8,18 @@ import LandingRules from './Rules';
 
 const { Content, Footer } = Layout;
 
-const Landing = () => (
+const Landing = () => {
+return (
   <Layout className="layout">
     <LandingHeader />
     <LandingBanner />
     <Content>
       <LandingIntroduction id="introduction" />
-      <LandingCarousel id="carousel" />
+      <LandingCarousel id="carousel" />      
       <LandingRules id="rules" />
     </Content>
     <Footer style={{ textAlign: 'center' }}>©2019 Made with &lt;3 <a href="//fb.com/baobinhaquarius" target="_blank" rel="noopener noreferrer">Bảo Bình - Aquarius</a></Footer>
   </Layout>
-);
+)};
 
 export default Landing;

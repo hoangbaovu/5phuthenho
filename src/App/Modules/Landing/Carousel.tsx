@@ -1,5 +1,7 @@
 import BannerAnim from 'rc-banner-anim';
 import React from 'react';
+import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+import QueueAnim from 'rc-queue-anim';
 
 import './less/Carousel.less'
 
@@ -13,9 +15,14 @@ type Props = {
 const LandingCarousel = ({ id }: Props) => {
 
   return (
-    <div className="carousel" id={id}>
-      <div className="container">
-        <BannerAnim autoPlay>
+    <ScrollOverPack id={id} className="carousel">
+      <QueueAnim
+        className="container"
+        key="text"
+        leaveReverse
+        type="top"
+      >
+        <BannerAnim key="carousel-banner" autoPlay>
           <Element key="aaa"
             prefixCls="banner-user-elem"
           >
@@ -50,8 +57,8 @@ const LandingCarousel = ({ id }: Props) => {
             />
           </Element>
         </BannerAnim>
-      </div>
-    </div>
+      </QueueAnim>
+    </ScrollOverPack>
   )
 }
 
