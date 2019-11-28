@@ -24,7 +24,7 @@ const LandingBanner = () => {
                 }}
                 key="2"
               >
-                <img src={require("../../../assets/banners/banner-title-2.png")} width="100%" alt="img" />
+                <img src={require("../../../assets/banners/5phuthenho_logo_effects.png")} width="100%" alt="img" />
               </TweenOne>
             </div>
             <div key="3" className="banner-content">
