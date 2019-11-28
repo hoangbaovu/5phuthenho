@@ -1,31 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.3a1c2c91.chunk.css",
-    "main.js": "/static/js/main.da3f421b.chunk.js",
-    "main.js.map": "/static/js/main.da3f421b.chunk.js.map",
+    "main.css": "/static/css/main.83a92bca.chunk.css",
+    "main.js": "/static/js/main.93a8d188.chunk.js",
+    "main.js.map": "/static/js/main.93a8d188.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0a06e422.js",
     "runtime-main.js.map": "/static/js/runtime-main.0a06e422.js.map",
     "static/css/2.dfbbb712.chunk.css": "/static/css/2.dfbbb712.chunk.css",
-    "static/js/2.79d4b680.chunk.js": "/static/js/2.79d4b680.chunk.js",
-    "static/js/2.79d4b680.chunk.js.map": "/static/js/2.79d4b680.chunk.js.map",
+    "static/js/2.f817f22f.chunk.js": "/static/js/2.f817f22f.chunk.js",
+    "static/js/2.f817f22f.chunk.js.map": "/static/js/2.f817f22f.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b26a1001985241e642ba633d2f2e10fe.js": "/precache-manifest.b26a1001985241e642ba633d2f2e10fe.js",
+    "precache-manifest.3b7dd3aa3d87abdab3f73b2c9178b588.js": "/precache-manifest.3b7dd3aa3d87abdab3f73b2c9178b588.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.dfbbb712.chunk.css.map": "/static/css/2.dfbbb712.chunk.css.map",
-    "static/css/main.3a1c2c91.chunk.css.map": "/static/css/main.3a1c2c91.chunk.css.map",
+    "static/css/main.83a92bca.chunk.css.map": "/static/css/main.83a92bca.chunk.css.map",
     "static/media/Banner.less": "/static/media/banner-2.5586c57b.jpg",
     "static/media/banner-title-2.png": "/static/media/banner-title-2.82bbf9d6.png",
     "static/media/HeaderTitle.less": "/static/media/bg-love.bbd01335.png",
     "static/media/carousel-1.jpg": "/static/media/carousel-1.113e0ebd.jpg",
     "static/media/carousel-2.jpg": "/static/media/carousel-2.eb43f735.jpg",
     "static/media/carousel-3.jpg": "/static/media/carousel-3.f9614c05.jpg",
-    "static/media/logo.png": "/static/media/logo.8982b532.png"
+    "static/media/logo.png": "/static/media/logo.8982b532.png",
+    "static/media/pose_puzzle_kumiawaseru.png": "/static/media/pose_puzzle_kumiawaseru.c792defc.png"
   },
   "entrypoints": [
     "static/js/runtime-main.0a06e422.js",
     "static/css/2.dfbbb712.chunk.css",
-    "static/js/2.79d4b680.chunk.js",
-    "static/css/main.3a1c2c91.chunk.css",
-    "static/js/main.da3f421b.chunk.js"
+    "static/js/2.f817f22f.chunk.js",
+    "static/css/main.83a92bca.chunk.css",
+    "static/js/main.93a8d188.chunk.js"
   ]
 }
