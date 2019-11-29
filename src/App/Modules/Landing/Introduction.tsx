@@ -13,11 +13,12 @@ const LandingIntroduction = ({ id }: Props) => {
     <ScrollOverPack id={id} className="introduction">
       <QueueAnim
         className="container"
-        key="text"
         leaveReverse
         type="top"
       >
-        <HeaderTitle key="h2" title="Giới thiệu" />
+        <div key="h2">
+          <HeaderTitle title="Giới thiệu" />
+        </div>
         <p key="p" className="introduction__content">
           Giữa cuộc sống hiện đại, chúng ta dường như đã quá vội vã, ồn ào mà bỏ quên những điều lặng lẽ, những chân tình ngày nào.
           Sống vội, yêu vội, hay đâu đó có người còn chưa bắt kịp với nhịp yêu đương thời hiện đại.

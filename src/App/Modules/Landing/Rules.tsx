@@ -17,7 +17,9 @@ const LandingRules = ({ id }: Props) => {
         leaveReverse
         type="bottom"
       >
-        <HeaderTitle key="h2" title="Thể lệ" />
+        <div key="h2">
+          <HeaderTitle key="h2" title="Thể lệ" />
+        </div>
         <p key="p" className="Rules__content">
           Đơn giản là sẽ có 20 bạn nam và 20 bạn nữ cùng tham gia, mỗi cặp sẽ có 5 phút để trò chuyện với nhau nhưng không được phép lộ thông tin cá nhân của mình.
           Hết 5 phút chuyện trò, bạn nữ ngồi im tại chỗ còn bạn nam đứng lên di chuyển sang bàn bên cạnh.

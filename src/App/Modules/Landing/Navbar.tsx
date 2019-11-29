@@ -68,6 +68,16 @@ const Navbar = () => {
           </Link>
           <Link
             activeClass="active"
+            to="guests"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {500}
+          >
+            Khách mời
+          </Link>
+          <Link
+            activeClass="active"
             to="lover"
             spy={true}
             smooth={true}
