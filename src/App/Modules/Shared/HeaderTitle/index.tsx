@@ -7,8 +7,8 @@ type Props = {
 }
 
 const Title = styled.h2`
-  font-size: 2.5em;
-  font-weight: 700;
+  font-size: ${props => props.theme.typography.fontSizeH4};
+  font-weight: ${props => props.theme.typography.fontWeightBold};
   text-align: center;
   text-transform: uppercase;
   letter-spacing: .4em;
@@ -30,7 +30,7 @@ const Link = styled.a`
   }
 
   &:hover {
-    color: @link-color-hover;
+    color: ${props => props.theme.palette.black};
   }
 `;
 
