@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.9a495269.chunk.css",
-    "main.js": "/static/js/main.4f5aacb7.chunk.js",
-    "main.js.map": "/static/js/main.4f5aacb7.chunk.js.map",
+    "main.css": "/static/css/main.092cedd7.chunk.css",
+    "main.js": "/static/js/main.27894be0.chunk.js",
+    "main.js.map": "/static/js/main.27894be0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0a06e422.js",
     "runtime-main.js.map": "/static/js/runtime-main.0a06e422.js.map",
-    "static/css/2.dfbbb712.chunk.css": "/static/css/2.dfbbb712.chunk.css",
-    "static/js/2.f817f22f.chunk.js": "/static/js/2.f817f22f.chunk.js",
-    "static/js/2.f817f22f.chunk.js.map": "/static/js/2.f817f22f.chunk.js.map",
+    "static/css/2.ccf332a2.chunk.css": "/static/css/2.ccf332a2.chunk.css",
+    "static/js/2.0bdebbb3.chunk.js": "/static/js/2.0bdebbb3.chunk.js",
+    "static/js/2.0bdebbb3.chunk.js.map": "/static/js/2.0bdebbb3.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.a4174c9797199c6be184a4486be0b76d.js": "/precache-manifest.a4174c9797199c6be184a4486be0b76d.js",
+    "precache-manifest.fddba10f8707333c7651b33a666bd357.js": "/precache-manifest.fddba10f8707333c7651b33a666bd357.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.dfbbb712.chunk.css.map": "/static/css/2.dfbbb712.chunk.css.map",
-    "static/css/main.9a495269.chunk.css.map": "/static/css/main.9a495269.chunk.css.map",
+    "static/css/2.ccf332a2.chunk.css.map": "/static/css/2.ccf332a2.chunk.css.map",
+    "static/css/main.092cedd7.chunk.css.map": "/static/css/main.092cedd7.chunk.css.map",
     "static/media/5phuthenho_logo_effects.png": "/static/media/5phuthenho_logo_effects.4aa89454.png",
     "static/media/Banner.less": "/static/media/banner-2.f8fb5e24.jpg",
-    "static/media/HeaderTitle.less": "/static/media/bg-love.bbd01335.png",
+    "static/media/bg-love.png": "/static/media/bg-love.bbd01335.png",
     "static/media/carousel-1.jpg": "/static/media/carousel-1.fbb5391f.jpg",
     "static/media/carousel-2.jpg": "/static/media/carousel-2.b6f03840.jpg",
     "static/media/carousel-3.jpg": "/static/media/carousel-3.bba5ef09.jpg",
@@ -23,9 +23,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0a06e422.js",
-    "static/css/2.dfbbb712.chunk.css",
-    "static/js/2.f817f22f.chunk.js",
-    "static/css/main.9a495269.chunk.css",
-    "static/js/main.4f5aacb7.chunk.js"
+    "static/css/2.ccf332a2.chunk.css",
+    "static/js/2.0bdebbb3.chunk.js",
+    "static/css/main.092cedd7.chunk.css",
+    "static/js/main.27894be0.chunk.js"
   ]
 }
