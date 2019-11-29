@@ -30,7 +30,7 @@ const Link = styled.a`
   }
 
   &:hover {
-    color: ${props => props.theme.palette.black};
+    color: ${props => props.theme.palette.secondary};
   }
 `;
 

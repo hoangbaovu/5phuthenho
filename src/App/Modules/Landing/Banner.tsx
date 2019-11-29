@@ -1,4 +1,5 @@
 import React from 'react';
+import { Parallax } from 'rc-scroll-anim';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import Texty from 'rc-texty';
@@ -28,7 +29,17 @@ const LandingBanner = () => {
               </TweenOne>
             </div>
             <div key="3" className="banner-content">
-              <Texty>"Mỗi cuộc gặp gỡ trong đời đều là duyên phận, không có đúng sai"</Texty>
+              <Parallax
+                animation={[
+                  { x: 0, opacity: 1, playScale: [0, 0.2] },
+                  { y: 5, playScale: [0, 0.3] },
+                  { blur: '10px', playScale: [0, 0.5] },
+                ]}
+                style={{ transform: 'translateX(-100px)', filter: 'blur(0px)', opacity: 0 }}
+                className="code-box-shape"
+              >
+                <Texty>"Mỗi cuộc gặp gỡ trong đời đều là duyên phận, không có đúng sai"</Texty>
+              </Parallax>
             </div>
           </QueueAnim>
         </div>
