@@ -14,6 +14,7 @@ const LandingIntroduction = ({ id }: Props) => {
       <QueueAnim
         className="container"
         leaveReverse
+        key="text"
         type="top"
       >
         <div key="h2">
