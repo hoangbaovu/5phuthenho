@@ -6,7 +6,7 @@ export const LandingGuestsData = {
       xs: 24,
       info: {
         name: 'Name',
-        subTitle: 'MC',
+        subTitle: 'Tarot',
         image: '../../../assets/guests/guest-12.png'
       }
     },
@@ -26,7 +26,7 @@ export const LandingGuestsData = {
       xs: 24,
       info: {
         name: 'Name',
-        subTitle: 'MC',
+        subTitle: 'Tarot',
         image: '../../../assets/guests/guest-32.png'
       }
     }

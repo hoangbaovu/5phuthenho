@@ -29,7 +29,7 @@ const LandingGuests = ({ dataSource, id }: Props) => {
           <HeaderTitle key="h23" title="Khách mời" />
         </div>
 
-        <Row type="flex" justify="space-around" align="middle" key="test">
+        <Row type="flex" justify="center" align="middle" key="test" style={{ marginTop: '150px' }}>
           {getGuests}
         </Row>
       </QueueAnim>
