@@ -28,7 +28,7 @@ const LandingGuestsInfo = ({ data, id }: Props) => {
       >
         <div>
           <div className="image-wrapper">
-            <img src={data.info.image} alt={data.info.name} />
+            <img src={data.info.image} alt={data.info.name} style={{ width: '95%' }} />
           </div>
           <h2>{data.info.name}</h2>
           <div>{data.info.subTitle}</div>
