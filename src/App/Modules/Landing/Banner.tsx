@@ -4,11 +4,6 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import Texty from 'rc-texty';
 import './less/Banner.less';
-import styled from 'styled-components';
-
-const Image = styled.img`
-  height: auto;
-`;
 
 const LandingBanner = () => {
   return (
@@ -18,7 +13,7 @@ const LandingBanner = () => {
           <QueueAnim
             key="QueueAnim"
             type={['bottom', 'top']}
-            delay={500}
+            delay={300}
           >
             <div key="1" className="banner-title">
             <TweenOne
@@ -29,7 +24,7 @@ const LandingBanner = () => {
                 }}
                 key="2"
               >
-                <Image src="../../../../assets/banners/5phuthenho_logo_effects.png" width="100%" alt="img" />
+                <img src="../../../../assets/banners/5phuthenho_logo_effects.png" width="100%" alt="img" />
               </TweenOne>
             </div>
             <div key="3" className="banner-content">
@@ -38,7 +33,6 @@ const LandingBanner = () => {
                   { x: 0, opacity: 1, playScale: [0, 0.2] },
                   { y: 5, playScale: [0, 0.3] },
                   { blur: '10px', playScale: [0, 0.5] },
-                  { duration: 50000 }
                 ]}
                 style={{ transform: 'translateX(-100px)', filter: 'blur(0px)', opacity: 0 }}
                 className="code-box-shape"
