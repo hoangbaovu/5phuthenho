@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-scroll";
 
 type Props = {
+  id?: string,
   title: string,
   path?: string
 }
@@ -15,7 +17,7 @@ const Title = styled.h2`
   margin-bottom: 80px;
 `;
 
-const Link = styled.a`
+const SLink = styled(Link)`
   position: relative;
 
   &:after {
@@ -34,10 +36,16 @@ const Link = styled.a`
   }
 `;
 
-export const HeaderTitle = ({ title, path = "/"}: Props) => {
+export const HeaderTitle = ({ id = "#", title, path = "/"}: Props) => {
   return (
     <Title>
-      <Link href={path}>{title}</Link>
+      <SLink
+        to={id ? id : path}
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration= {500}
+      >{title}</SLink>
     </Title>
   )
 }

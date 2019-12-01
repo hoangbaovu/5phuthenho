@@ -1,3 +1,33 @@
+export const LandingNavbarData = {
+  data: [
+    {
+      id: 'introduction',
+      name: 'Giới Thiệu',
+      path: '',
+    },
+    {
+      id: 'rules',
+      name: 'Thể Lệ',
+      path: '',
+    },
+    {
+      id: 'guests',
+      name: 'Khách Mời',
+      path: '',
+    },
+    {
+      id: 'timeline',
+      name: 'Lịch Trình',
+      path: '',
+    },
+    {
+      id: 'about',
+      name: 'Liên Hệ',
+      path: '',
+    }
+  ]
+}
+
 export const LandingGuestsData = {
   heading: 'Khách mời',
   data: [

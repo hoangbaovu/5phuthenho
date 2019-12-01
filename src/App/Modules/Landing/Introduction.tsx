@@ -38,7 +38,7 @@ const LandingIntroduction = ({ id }: Props) => {
         type="top"
       >
         <div key="h2">
-          <HeaderTitle title="Giới thiệu" />
+          <HeaderTitle title="Giới thiệu" id={id} />
         </div>
         <Content key="p">
           Giữa cuộc sống hiện đại, chúng ta dường như đã quá vội vã, ồn ào mà bỏ quên những điều lặng lẽ, những chân tình ngày nào.

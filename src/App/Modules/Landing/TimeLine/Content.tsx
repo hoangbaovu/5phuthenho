@@ -5,9 +5,10 @@ import TimelineTitle from './Title';
 import TimeLineItemContent from './ItemContent';
 
 const TimeLineContent = () => {
+  const clockIcon = <Icon type="clock-circle-o" />;
   return (
     <Timeline mode="alternate" style={{ overflowX: "hidden", padding: "20px 0" }}>
-      <Timeline.Item dot={<Icon type="clock-circle-o" />}>
+      <Timeline.Item dot={clockIcon}>
         <TimelineTime>13:45</TimelineTime>
         <TimelineTitle>Đón Khách <Icon type="heart" /></TimelineTitle>
         <TimeLineItemContent img="../../../../assets/timeline/welcome.png">
@@ -17,19 +18,19 @@ const TimeLineContent = () => {
           Với những bạn có nhu cầu xem tarot nhiều hơn, kỹ và chi tiết hơn: các cô gái reader của chúng tôi sẽ sẵn lòng xem bài cho bạn với chi phí tùy thuộc ở bạn.
         </TimeLineItemContent>
       </Timeline.Item>
-      <Timeline.Item dot={<Icon type="clock-circle-o" />}>
+      <Timeline.Item dot={clockIcon}>
         <TimelineTime>14:30</TimelineTime>
-        <TimelineTitle>Chương Trình Chính</TimelineTitle>
+        <TimelineTitle><Icon type="heart" /> Chương Trình Chính</TimelineTitle>
         <TimeLineItemContent img="../../../../assets/timeline/talk.png"></TimeLineItemContent>
       </Timeline.Item>
-      <Timeline.Item dot={<Icon type="clock-circle-o" />}>
+      <Timeline.Item dot={clockIcon}>
         <TimelineTime>17:15</TimelineTime>
         <TimelineTitle>Tiệc Trà Bánh</TimelineTitle>
         <TimeLineItemContent img="../../../../assets/timeline/party2.png">
-        Dùng trà, bánh kẹo hoa quả, giao lưu với các bạn chơi.
+          Dùng trà, bánh kẹo hoa quả, giao lưu với các bạn chơi.
         </TimeLineItemContent>
       </Timeline.Item>
-      <Timeline.Item dot={<Icon type="clock-circle-o" />}>
+      <Timeline.Item dot={clockIcon}>
         <TimelineTime>17:30</TimelineTime>
         <TimelineTitle>Tổng Kết Chương Trình</TimelineTitle>
         <TimeLineItemContent img="../../../../assets/timeline/matching2.png">

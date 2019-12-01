@@ -26,7 +26,7 @@ const LandingGuests = ({ data, id }: Props) => {
         type="bottom"
       >
         <div key="h2">
-          <HeaderTitle key="h23" title={data.heading} />
+          <HeaderTitle key="h23" title={data.heading} id={id} />
         </div>
 
         <Row type="flex" justify="space-around" align="middle" key="test" style={{ marginTop: '150px' }}>

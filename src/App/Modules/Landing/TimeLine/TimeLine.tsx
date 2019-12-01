@@ -27,9 +27,11 @@ const LandingTimeline = ({ id, data }: Props) => {
       type="bottom"
     >
       <div key="h2">
-        <HeaderTitle key="h23" title={data.heading} />
+        <HeaderTitle key="h23" title={data.heading} id={id} />
       </div>
-      <TimeLineContent />
+      <div key="timeline-table">
+        <TimeLineContent  />
+      </div>
     </QueueAnim>
   </TimeLineWrapper>
   )

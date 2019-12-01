@@ -7,7 +7,11 @@ import { CSSTransition } from 'react-transition-group';
 import Logo from './Logo';
 import './less/Navbar.less';
 
-const Navbar = () => {
+type Props = {
+  data: any,
+}
+
+const Navbar = ({ data }: Props) => {
   const [isNavVisible, setNavVisibility] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -33,6 +37,24 @@ const Navbar = () => {
     setNavVisibility(!isNavVisible);
   };
 
+  const renderMenu = data.data.map((item: any, index: number) => {
+    return (
+      <Link
+        activeClass="active"
+        to={item.id}
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration= {500}
+        key={index}
+      >
+        {item.name}
+      </Link>
+    )
+  });
+
+  console.log(renderMenu);
+
   return (
     <div className="Navbar">
       <Logo
@@ -46,56 +68,7 @@ const Navbar = () => {
         unmountOnExit
       >
         <nav className={`Nav ${isNavVisible && 'active'}`}>
-          <Link
-            activeClass="active"
-            to="introduction"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration= {500}
-          >
-            Giới thiệu
-          </Link>
-          <Link
-            activeClass="active"
-            to="rules"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration= {500}
-          >
-            Thể lệ
-          </Link>
-          <Link
-            activeClass="active"
-            to="guests"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration= {500}
-          >
-            Khách mời
-          </Link>
-          <Link
-            activeClass="active"
-            to="lover"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration= {500}
-          >
-            Lover
-          </Link>
-          <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration= {500}
-          >
-            Liên hệ
-          </Link>
+          {renderMenu}
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="Burger">

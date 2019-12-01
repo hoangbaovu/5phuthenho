@@ -4,6 +4,7 @@ import { Layout } from 'antd';
 import { 
   LandingGuestsData,
   LandingTimeLineData,
+  LandingNavbarData,
 } from './data.landing';
 
 import LandingHeader from './Header';
@@ -19,14 +20,14 @@ const { Content, Footer } = Layout;
 const Landing = () => {
 return (
   <Layout className="layout">
-    <LandingHeader />
+    <LandingHeader data={LandingNavbarData} />
     <LandingBanner />
     <Content>
       <LandingIntroduction key="introduction" id="introduction" />
       <LandingCarousel key="carousel" id="carousel" />      
       <LandingRules key="rules" id="rules" />
       <LandingGuests key="guests" id="guests" data={LandingGuestsData} />
-      <LandingTimeline key="timeline" id="hiduashdniawx" data={LandingTimeLineData} />
+      <LandingTimeline key="timeline" id="timeline" data={LandingTimeLineData} />
     </Content>
     <Footer style={{ textAlign: 'center' }}>©2019 Made with ❤ by <a href="//fb.com/baobinhaquarius" target="_blank" rel="noopener noreferrer">Bảo Bình - Aquarius</a></Footer>
   </Layout>

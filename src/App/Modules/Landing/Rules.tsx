@@ -18,7 +18,7 @@ const LandingRules = ({ id }: Props) => {
         type="bottom"
       >
         <div key="h2">
-          <HeaderTitle key="h2" title="Thể lệ" />
+          <HeaderTitle key="h2" title="Thể lệ" id={id} />
         </div>
         <p key="p" className="Rules__content">
           Đơn giản là sẽ có 20 bạn nam và 20 bạn nữ cùng tham gia, mỗi cặp sẽ có 5 phút để trò chuyện với nhau nhưng không được phép lộ thông tin cá nhân của mình.
