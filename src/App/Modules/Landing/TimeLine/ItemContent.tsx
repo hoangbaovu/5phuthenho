@@ -14,8 +14,12 @@ const ItemContentContainer = styled.div`
 
 const ItemContentImage = styled.img`
   margin-bottom: 20px;
+  height: 268px;
+  width: 391px;
+
   @media (max-width: 1200px) {
-    width: 100%;
+    height: auto;
+    max-width: 100%;
   }
 `;
 

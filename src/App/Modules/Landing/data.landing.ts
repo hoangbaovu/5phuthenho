@@ -7,27 +7,27 @@ export const LandingGuestsData = {
       xs: 24,
       info: {
         name: 'Điềm',
-        subTitle: 'Tarot Reader',
+        subTitle: '',
         image: '../../../assets/guests/guest-12.png'
       }
     },
-    // {
-    //   name: 'block1',
-    //   md: 8,
-    //   xs: 24,
-    //   info: {
-    //     name: 'Name',
-    //     subTitle: 'MC',
-    //     image: '../../../assets/guests/guest-22.png'
-    //   }
-    // },
+    {
+      name: 'block1',
+      md: 8,
+      xs: 24,
+      info: {
+        name: 'Tarot Reader',
+        subTitle: '',
+        image: '../../../assets/guests/tarot_uranai_woman.png'
+      }
+    },
     {
       name: 'block2',
       md: 8,
       xs: 24,
       info: {
         name: 'Hanie',
-        subTitle: 'Tarot Reader',
+        subTitle: '',
         image: '../../../assets/guests/guest-32.png'
       }
     }

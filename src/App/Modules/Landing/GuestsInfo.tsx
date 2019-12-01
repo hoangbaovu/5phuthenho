@@ -53,9 +53,9 @@ const LandingGuestsInfo = ({ data, id }: Props) => {
         key="image"
         animation={imgAni}
       >
-        <GuestImage src={data.info.image} alt={data.info.name} />
-        <GuestName>{data.info.name}</GuestName>
-        <GuestJobTitle>{data.info.subTitle}</GuestJobTitle>
+        <GuestImage src={data.info.image} alt={data.info.name ? data.info.name : ''} />
+        {data.info.name && <GuestName>{data.info.name}</GuestName>}
+        {data.info.subTitle && <GuestJobTitle>{data.info.subTitle}</GuestJobTitle>}
       </GuestContainer>
     </Col>
   )
