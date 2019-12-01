@@ -3,7 +3,6 @@ import { Timeline, Icon } from 'antd';
 import TimelineTime from './Time';
 import TimelineTitle from './Title';
 import TimeLineItemContent from './ItemContent';
-import './test.less';
 
 const TimeLineContent = () => {
   return (
