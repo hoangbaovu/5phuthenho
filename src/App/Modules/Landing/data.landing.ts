@@ -21,8 +21,8 @@ export const LandingNavbarData = {
       path: '',
     },
     {
-      id: 'about',
-      name: 'Liên Hệ',
+      id: 'address',
+      name: 'Địa Điểm',
       path: '',
     }
   ]
@@ -68,5 +68,26 @@ export const LandingTimeLineData = {
   heading: 'Khung chương trình',
   data: [
 
+  ]
+}
+
+export const LandingSponsorData = {
+  source: '../../../../assets/video.mp4',
+  data: [
+    {
+      name: "Bảo Bình - Aquarius",
+      path: '//fb.com/baobinhaquarius',
+      source: '../../../../assets/sponsor/aquarius.jpg',
+    },
+    {
+      name: "Bảo Bình Radio",
+      path: '//fb.com/baobinhradio',
+      source: '../../../../assets/sponsor/bbradio.jpg',
+    },
+    {
+      name: "5 Phút Hẹn Hò",
+      path: '//fb.com/5phuthenho',
+      source: '../../../../assets/sponsor/5phuthenho.jpg',
+    },
   ]
 }
