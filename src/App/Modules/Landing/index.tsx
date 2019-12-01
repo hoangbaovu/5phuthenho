@@ -5,6 +5,7 @@ import {
   LandingGuestsData,
   LandingTimeLineData,
   LandingNavbarData,
+  LandingAddressData,
   LandingSponsorData,
 } from './data.landing';
 
@@ -16,6 +17,7 @@ import LandingRules from './Rules';
 import LandingGuests from './Guests';
 import LandingTimeline from './TimeLine/TimeLine';
 import LandingVideo from './Video';
+import LandingAddress from './Address';
 
 const { Content, Footer } = Layout;
 
@@ -30,6 +32,7 @@ return (
       <LandingRules key="rules" id="rules" />
       <LandingGuests key="guests" id="guests" data={LandingGuestsData} />
       <LandingTimeline key="timeline" id="timeline" data={LandingTimeLineData} />
+      <LandingAddress key="address" id="address" data={LandingAddressData} />
       <LandingVideo key="video" id="video" data={LandingSponsorData} />
     </Content>
     <Footer style={{ textAlign: 'center' }}>©2019 Made with ❤ by <a href="//fb.com/baobinhaquarius" target="_blank" rel="noopener noreferrer">Bảo Bình - Aquarius</a></Footer>

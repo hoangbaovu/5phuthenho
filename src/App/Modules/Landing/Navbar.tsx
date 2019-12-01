@@ -53,8 +53,6 @@ const Navbar = ({ data }: Props) => {
     )
   });
 
-  console.log(renderMenu);
-
   return (
     <div className="Navbar">
       <Logo
