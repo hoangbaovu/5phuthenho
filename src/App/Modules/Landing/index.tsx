@@ -1,7 +1,10 @@
 import React from 'react';
 import { Layout } from 'antd';
 
-import { LandingGuestsData} from './data.landing';
+import { 
+  LandingGuestsData,
+  LandingTimeLineData,
+} from './data.landing';
 
 import LandingHeader from './Header';
 import LandingBanner from './Banner';
@@ -9,6 +12,7 @@ import LandingIntroduction from './Introduction';
 import LandingCarousel from './Carousel';
 import LandingRules from './Rules';
 import LandingGuests from './Guests';
+import LandingTimeline from './TimeLine/TimeLine';
 
 const { Content, Footer } = Layout;
 
@@ -21,9 +25,10 @@ return (
       <LandingIntroduction key="introduction" id="introduction" />
       <LandingCarousel key="carousel" id="carousel" />      
       <LandingRules key="rules" id="rules" />
-      <LandingGuests key="guests" id="guests" dataSource={LandingGuestsData} />
+      <LandingGuests key="guests" id="guests" data={LandingGuestsData} />
+      <LandingTimeline key="timeline" id="hiduashdniawx" data={LandingTimeLineData} />
     </Content>
-    <Footer style={{ textAlign: 'center' }}>©2019 Made with &lt;3 by <a href="//fb.com/baobinhaquarius" target="_blank" rel="noopener noreferrer">Bảo Bình - Aquarius</a></Footer>
+    <Footer style={{ textAlign: 'center' }}>©2019 Made with ❤ by <a href="//fb.com/baobinhaquarius" target="_blank" rel="noopener noreferrer">Bảo Bình - Aquarius</a></Footer>
   </Layout>
 )};
 

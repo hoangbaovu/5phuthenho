@@ -8,17 +8,19 @@ type Props = {
   data: any,
 }
 
-const GuestInfo = styled(TweenOne)`
+const GuestContainer = styled(TweenOne)`
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
-const Image = styled.img`
-  width: 95%;
+const GuestImage = styled.img`
+  @media(max-width: 1200px) {
+    width: 90%;
+  }
 `;
 
-const Name = styled.h3`
+const GuestName = styled.h3`
   color: ${props => props.theme.palette.primary};
   font-size: ${props => props.theme.typography.fontSizeH4};
   font-family: ${props => props.theme.typography.fontFamilySecondary};
@@ -26,7 +28,7 @@ const Name = styled.h3`
   margin-top: 30px;
 `;
 
-const JobTitle = styled.h4`
+const GuestJobTitle = styled.h4`
   color: ${props => props.theme.palette.black};
   font-size: 1rem;
   font-weight: ${props => props.theme.typography.fontWeightBold};
@@ -36,7 +38,7 @@ const LandingGuestsInfo = ({ data, id }: Props) => {
 
   const getDelay = (id: number, delay: number = 300) => id * delay;
 
-  const animation: Object = {
+  const imgAni: Object = {
     y: 30,
     opacity: 0,
     type: 'from',
@@ -47,14 +49,14 @@ const LandingGuestsInfo = ({ data, id }: Props) => {
 
   return (
     <Col xs={data.xs} md={data.md} key={data.name}>
-      <GuestInfo
+      <GuestContainer
         key="image"
-        animation={animation}
+        animation={imgAni}
       >
-        <Image src={data.info.image} alt={data.info.name} />
-        <Name>{data.info.name}</Name>
-        <JobTitle>{data.info.subTitle}</JobTitle>
-      </GuestInfo>
+        <GuestImage src={data.info.image} alt={data.info.name} />
+        <GuestName>{data.info.name}</GuestName>
+        <GuestJobTitle>{data.info.subTitle}</GuestJobTitle>
+      </GuestContainer>
     </Col>
   )
 }

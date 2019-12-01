@@ -7,13 +7,13 @@ import LandingGuestsInfo from './GuestsInfo';
 import './less/Guests.less';
 
 type Props = {
-  dataSource: any,
+  data: any,
   id: string,
 }
 
-const LandingGuests = ({ dataSource, id }: Props) => {
+const LandingGuests = ({ data, id }: Props) => {
 
-  const getGuests = dataSource.data.map((item: any, index: number) => {
+  const getGuests = data.data.map((item: any, index: number) => {
     return <LandingGuestsInfo key={index} id={index} data={item} />;
   });
 
@@ -26,10 +26,10 @@ const LandingGuests = ({ dataSource, id }: Props) => {
         type="bottom"
       >
         <div key="h2">
-          <HeaderTitle key="h23" title="Khách mời" />
+          <HeaderTitle key="h23" title={data.heading} />
         </div>
 
-        <Row type="flex" justify="center" align="middle" key="test" style={{ marginTop: '150px' }}>
+        <Row type="flex" justify="space-around" align="middle" key="test" style={{ marginTop: '150px' }}>
           {getGuests}
         </Row>
       </QueueAnim>
