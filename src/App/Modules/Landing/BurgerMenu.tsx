@@ -11,21 +11,24 @@ const Menu = styled.div`
   width: 40px;
   margin: 0 20px 0 0;
   cursor: "pointer";
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const MenuLine = styled.span`
+  background: ${props => props.theme.palette.primary};
   display: block;
-  width: 40px;
   height: 5px;
-  background: red;
   margin: 12px 30px 0 0;
   transition: all .1s ease-in-out;
+  width: 40px;
 
   ${Menu}.active & {
     width: 40px;
     
     &:nth-child(1) {
-      width: 40px;
       transform: translateY(17px) rotate(45deg);
     }
     
@@ -34,7 +37,6 @@ const MenuLine = styled.span`
     }
     
     &:nth-child(3) {
-      width: 40px;
       transform: translateY(-17px) rotate(-45deg);
     }
   }
