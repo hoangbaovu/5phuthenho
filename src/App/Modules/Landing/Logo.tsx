@@ -23,6 +23,7 @@ const Image = styled.img`
   position: absolute;
   top: 0;
   transition: all .3s ease-in-out;
+  z-index: 999999;
 
   &:hover {
     opacity: .8;

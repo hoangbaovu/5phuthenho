@@ -10,7 +10,8 @@ const Menu = styled.div`
   flex-direction: column;
   width: 40px;
   margin: 0 20px 0 0;
-  cursor: "pointer";
+  cursor: pointer;
+  z-index: 999999;
 
   @media (min-width: 768px) {
     display: none;

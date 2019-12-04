@@ -35,25 +35,6 @@
   }
 }
 
-.Burger {
-  display: none;
-  grid-area: burger;
-  margin: 0 20px 0 0;
-  padding: 0;
-  justify-self: end;
-  font-size: 40px;
-  border: none;
-  background: none;
-  outline: none;
-  transition: 0.1s;
-  cursor: pointer;
-}
-
-.Burger:active {
-  transform: rotate(90deg);;
-  transition: all 0.2s ease-in-out;
-}
-
 @media (max-width: 768px) {
   .Nav {
     grid-template-rows: repeat(4, auto);
@@ -68,26 +49,17 @@
     width: 100%;
     text-align: center;
     z-index: 99999;
-
-    &.active {
-      margin-right: 0;
-    }
-  }
-
-  .Burger {
-    cursor: pointer;
-    display: inline;
   }
 }
 
 .NavAnimation-enter {
   opacity: 0;
-  transform: translateY(-100px);
+  transform: translateY(-70px);
 }
 .NavAnimation-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 350ms, transform 350ms;
+  transition: all .3s ease-in-out;
 }
 .NavAnimation-exit {
   opacity: 1;
@@ -95,6 +67,6 @@
 }
 .NavAnimation-exit-active {
   opacity: 0;
-  transform: translateY(-100px);
-  transition: opacity 350ms, transform 350ms;
+  transform: translateY(-70px);
+  transition: all .3s ease-in-out;
 }
