@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-scroll";
 
-import { Icon } from 'antd';
-
 import { CSSTransition } from 'react-transition-group';
 import Logo from './Logo';
+import BurgerMenu from './BurgerMenu';
 import './less/Navbar.less';
 
 type Props = {
@@ -53,6 +52,8 @@ const Navbar = ({ data }: Props) => {
     )
   });
 
+  console.log(isNavVisible)
+
   return (
     <div className="Navbar">
       <Logo
@@ -69,13 +70,7 @@ const Navbar = ({ data }: Props) => {
           {renderMenu}
         </nav>
       </CSSTransition>
-      <button onClick={toggleNav} className="Burger">
-        {isNavVisible ? (
-          <Icon type="close" style={{ cursor: "pointer" }} />
-        ) : (
-          <Icon type="menu" style={{ cursor: "pointer" }} />
-        ) } 
-      </button>
+      <BurgerMenu toggle={toggleNav} visible={isNavVisible} />
     </div>
   )
 }
