@@ -92,7 +92,7 @@ const LandingBanner = () => {
                 animation={logoAni}
                 key="2"
               >
-                <ShineEffect source="../../../../assets/banners/5phuthenho_logo_banner.png" />
+                <ShineEffect source="../../../../assets/banners/5phuthenho_logo_banner.png" to="introduction" width="500" />
               </TweenOne>
             </BannerTextTitle>
             <BannerTextContent key="3">
