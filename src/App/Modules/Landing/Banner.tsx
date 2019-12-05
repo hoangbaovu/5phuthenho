@@ -1,10 +1,13 @@
 import React from 'react';
+import { Icon } from 'antd';
 import { Parallax } from 'rc-scroll-anim';
+import { Link } from "react-scroll";
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import Texty from 'rc-texty';
 import styled from 'styled-components';
 import ShineEffect from './ShineEffect';
+
 
 const BannerWrapper = styled.div`
   width: 100%;
@@ -49,18 +52,40 @@ const BannerTextContent = styled.div`
   font-size: 2.2em;
   letter-spacing: 1px;
   line-height: 2em;
-  margin-bottom: 20px;
+  margin: 50px 0;
   word-wrap: break-word;
   min-height: 24px;
   text-shadow: 1px 2px 3px rgba(255,255,255,1);
 
+  @media (max-width: 320px) {
+    margin: -80px 0 0;
+    font-size: 1em;
+  }
+
   @media (max-width: 768px) {
+    margin: -50px 0 0;
     font-size: 2em;
   }
 `;
 
 const BannerTextDescription = styled(Parallax)`
   filter: blur(0px);
+`;
+
+// const BannerFrame = styled.img`
+//   margin: 50px 0;
+// `;
+
+const BannerNext = styled.div`
+  display: inline-block;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+
+  @media (max-width: 768px) {
+    bottom: 1%;
+  }
 `;
 
 const LandingBanner = () => {
@@ -100,8 +125,36 @@ const LandingBanner = () => {
                 <Texty>"Mỗi cuộc gặp gỡ trong đời đều là duyên phận, không có đúng sai."</Texty>
               </BannerTextDescription>
             </BannerTextContent>
+            {/* <TweenOne
+              animation={{ 
+                scale: 1, 
+                duration: 1000,
+                delay: 3500,
+              }}
+              style={{ transform: 'scale(0)' }}
+            >
+              <BannerFrame key="4" src="../../../../assets/title_frame.png" alt=""/>
+            </TweenOne> */}
           </QueueAnim>
         </BannerTextWrapper>
+        <BannerNext key="next">
+          <TweenOne
+            animation={logoAni}
+            key="2"
+          >
+            <Link
+              to="introduction"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration= {1000}
+              key="next"
+            >
+              <Icon type="arrow-down" style={{ fontSize: '64px' }} />
+            </Link>
+          </TweenOne>
+        </BannerNext>
       </div>
     </BannerWrapper>
   )
