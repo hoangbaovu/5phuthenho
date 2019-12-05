@@ -4,8 +4,7 @@ import createTheme from './theme/index';
 import GlobalStyle from './theme/globalStyle';
 import Landing from './App/Modules/Landing';
 
-const App: React.FC = () => {
-  
+const App: React.FC = () => {  
   return (
     <>
     <GlobalStyle />

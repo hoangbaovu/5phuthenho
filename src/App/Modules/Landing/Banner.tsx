@@ -12,7 +12,7 @@ const BannerWrapper = styled.div`
   position: relative;
   text-align: center;
   border-color: #666;
-  background-image: url(../../../../assets/banners/banner-2.jpg);
+  background: url(../../../../assets/banners/banner-3.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -21,13 +21,12 @@ const BannerWrapper = styled.div`
 const BannerTextWrapper = styled.div`
   display: inline-block;
   position: absolute;
-  top: 20%;
+  top: 100px;
   margin: auto;
   left: 0;
   right: 0;
   font-size: 14px;
   color: #fff;
-  width: 800px;
 
   @media (max-width: 1200px) {
     width: 90%;
@@ -35,11 +34,8 @@ const BannerTextWrapper = styled.div`
 `;
 
 const BannerTextTitle = styled.div`
-  width: 800px;
-  max-height: 519px;
   margin: auto;
   display: inline-block;
-  font-size: 40px;
   position: relative;
 
   @media (max-width: 1200px) {
@@ -48,16 +44,18 @@ const BannerTextTitle = styled.div`
 `;
 
 const BannerTextContent = styled.div`
+  color: ${props => props.theme.palette.black };
   font-family: 'Pacifico', cursive;
-  font-size: 1.8em;
+  font-size: 2.2em;
   letter-spacing: 1px;
+  line-height: 2em;
   margin-bottom: 20px;
   word-wrap: break-word;
   min-height: 24px;
-  text-shadow: 2px 1px 11px rgba(150, 150, 150, 1);
+  text-shadow: 1px 2px 3px rgba(255,255,255,1);
 
   @media (max-width: 768px) {
-    font-size: 1.2em;
+    font-size: 2em;
   }
 `;
 
@@ -99,7 +97,7 @@ const LandingBanner = () => {
               <BannerTextDescription
                 animation={textAni}
               >
-                <Texty>"Mỗi cuộc gặp gỡ trong đời đều là duyên phận, không có đúng sai"</Texty>
+                <Texty>"Mỗi cuộc gặp gỡ trong đời đều là duyên phận, không có đúng sai."</Texty>
               </BannerTextDescription>
             </BannerTextContent>
           </QueueAnim>
