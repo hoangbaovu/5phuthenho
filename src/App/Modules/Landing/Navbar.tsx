@@ -52,8 +52,6 @@ const Navbar = ({ data }: Props) => {
     )
   });
 
-  console.log(isNavVisible)
-
   return (
     <div className="Navbar">
       <Logo

@@ -4,6 +4,7 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import Texty from 'rc-texty';
 import styled from 'styled-components';
+import ShineEffect from './ShineEffect';
 
 const BannerWrapper = styled.div`
   width: 100%;
@@ -70,6 +71,7 @@ const LandingBanner = () => {
     y: '-=10',
     yoyo: true,
     repeat: -1,
+    duration: 900,
   }
 
   const textAni: Object = [
@@ -90,7 +92,7 @@ const LandingBanner = () => {
                 animation={logoAni}
                 key="2"
               >
-                <img src="../../../../assets/banners/5phuthenho_logo_effects.png" width="100%" alt="img" />
+                <ShineEffect source="../../../../assets/banners/5phuthenho_logo_banner.png" />
               </TweenOne>
             </BannerTextTitle>
             <BannerTextContent key="3">
