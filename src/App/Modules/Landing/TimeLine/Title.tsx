@@ -9,7 +9,6 @@ const TitleContainer = styled.p`
 `
 
 const TitleContent = styled.span`
-  background: #fff;
   width: 60px;
   text-align: center;
   color: ${props => props.theme.palette.primary};

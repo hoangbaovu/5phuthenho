@@ -13,7 +13,6 @@ const TimeContainer = styled.p`
 `
 
 const TimeContent = styled.span`
-  background: #fff;
   padding: 10px;
   width: 60px;
 `

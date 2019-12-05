@@ -11,7 +11,8 @@ type Props = {
 }
 
 const TimeLineWrapper = styled(ScrollOverPack)`
-  background: #fff;
+  background: url(../../../../assets/bg_timeline.jpg) repeat;
+  background-position: top center;
   padding: 100px 0;
   min-height: 100vh;
 `;

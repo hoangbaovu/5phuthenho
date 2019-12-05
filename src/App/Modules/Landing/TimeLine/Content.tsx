@@ -5,7 +5,8 @@ import TimelineTitle from './Title';
 import TimeLineItemContent from './ItemContent';
 
 const TimeLineContent = () => {
-  const clockIcon = <Icon type="clock-circle-o" />;
+  
+const clockIcon = <Icon type="clock-circle-o" />;
   return (
     <Timeline mode="alternate" style={{ overflowX: "hidden", padding: "20px 0" }}>
       <Timeline.Item dot={clockIcon}>
