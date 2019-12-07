@@ -3,7 +3,7 @@ import { Row, Col } from 'antd';
 import { Link } from "react-scroll";
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import QueueAnim from 'rc-queue-anim';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import { HeaderTitle } from '../Shared/HeaderTitle';
 
 type Props = {
@@ -62,14 +62,13 @@ const IntroductionLeftImage = styled.img`
 const IntroductionButton = styled(Link)`
   color: ${props => props.theme.palette.black};
   display: flex;
-  width: 330px;
-  height: 68px;
+  width: 320px;
+  height: 74px;
   justify-content: center;
   align-items: center;
 
   position: relative;
   margin: auto;
-  padding: 19px 22px;
   transition: all .2s ease;
 
   &:hover {
@@ -108,25 +107,48 @@ const IntroductionButtonSpan = styled.span`
   vertical-align: middle;
 `;
 
-const pulse = keyframes`
+const aniArrow = css`
   0% {
-    transform: translateX(0);
     opacity: 1;
     transform-origin: center;
   }
   50% {
-    transform: translateX(10px);
     opacity: .5;
   }
   100% {
-    transform: translateX(0);
     opacity: 1;
+  }
+`;
+
+const aniArrowLeft = keyframes`
+  ${aniArrow};
+  0% {
+    transform: translateY(0)  rotate(90deg);
+  }
+  50% {
+    transform: translateY(10px)  rotate(90deg);
+  }
+  100% {
+    transform: translateY(0)  rotate(90deg);
+  }
+`;
+
+const aniArrowRight = keyframes`
+  ${aniArrow};
+  0% {
+    transform: translateX(0) rotate(180deg);
+  }
+  50% {
+    transform: translateX(10px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(180deg);
   }
 `;
 
 const IntroductionButtonSVG = styled.svg`
   position: relative;
-  top: 2px;
+  top: 0;
   margin-left: 10px;
   fill: none;
   stroke-linecap: round;
@@ -134,13 +156,14 @@ const IntroductionButtonSVG = styled.svg`
   stroke: #222;
   stroke-width: 2;
   transition: all .3s ease;
-  animation: ${pulse} infinite 1s linear;
+  animation: ${aniArrowRight} infinite 1s linear;
   width: 23px;
   height: 23px;
 
   ${IntroductionButton}:hover & {
+    top: -5px;
     stroke: #ff6aa4;
-    transform: translateX(0);
+    animation: ${aniArrowLeft} infinite 1s linear;
   }
 `;
 

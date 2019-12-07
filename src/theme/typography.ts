@@ -17,7 +17,7 @@ export type TypographyInput = { +readonly [K in keyof Typography]+?: Typography[
   fontSize?: number;
   htmlFontSize?: number;
 };
-const defaultFontFamily = "-apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif";
+const defaultFontFamily = "'Roboto', 'Segoe UI', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
 
 const createTypography = (typography: TypographyInput): Typography => {
   const {
