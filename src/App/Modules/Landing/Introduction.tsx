@@ -19,6 +19,18 @@ const Introduction = styled.div`
   align-items: center;
 `;
 
+const IntroductionCol = styled(Col)`
+  @media (max-width: 768px) {
+    &:nth-child(1) {
+      order: 2;
+    }
+  
+    &:nth-child(2) {
+      order: 1;
+    }
+  }
+`;
+
 const Content = styled.p`
   font-size: 20px;
   line-height: 2em;
@@ -147,18 +159,18 @@ const aniArrowRight = keyframes`
 `;
 
 const IntroductionButtonSVG = styled.svg`
-  position: relative;
-  top: 0;
-  margin-left: 10px;
+  animation: ${aniArrowRight} infinite 1s linear;
   fill: none;
+  height: 23px;
+  margin-left: 10px;
+  position: relative;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke: #222;
   stroke-width: 2;
+  stroke: #222;
+  top: 0;
   transition: all .3s ease;
-  animation: ${aniArrowRight} infinite 1s linear;
   width: 23px;
-  height: 23px;
 
   ${IntroductionButton}:hover & {
     top: -5px;
@@ -176,7 +188,11 @@ const IntroductionRight = styled.div`
   padding: 70px 31px;
 
   @media (max-width: 768px) {
-    margin-top: 40px;
+    background: #f7e9e8;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0;
+    padding: 0;
   }
 `;
 
@@ -189,8 +205,8 @@ const LandingIntroduction = ({ id }: Props) => {
         key="text"
         type="top"
       >
-          <Row key="row">
-            <Col xs={24} md={10}>
+          <Row key="row" type="flex">
+            <IntroductionCol xs={24} md={10}>
               <IntroductionLeft>
                 <IntroductionLeftImage src="../../../assets/intro.jpg" alt="" />
                 <IntroductionButton
@@ -209,8 +225,8 @@ const LandingIntroduction = ({ id }: Props) => {
                   </IntroductionButtonSVG>
                 </IntroductionButton>
               </IntroductionLeft>
-            </Col>
-            <Col xs={24} md={14}>
+            </IntroductionCol>
+            <IntroductionCol xs={24} md={14}>
               <IntroductionRight>
                 <HeaderTitle title="Giới thiệu" id={id} />
                 <Content key="p">
@@ -222,7 +238,7 @@ const LandingIntroduction = ({ id }: Props) => {
                   Chúng tôi gọi đó là duyên! Bạn đã sẵn sàng cho một tháng 12 ngọt ngào?                  
                 </Content>
               </IntroductionRight>
-            </Col>
+            </IntroductionCol>
           </Row>
       </QueueAnim>
     </ScrollOverPack>
