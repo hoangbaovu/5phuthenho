@@ -113,6 +113,8 @@ const LandingBanner = () => {
 
   const textAni: Object = [
     { x: 0, opacity: 1, playScale: [0, 0.2] },
+    { y: 10, playScale: [0, 0.3] },
+    { blur: '10px', playScale: [0, 0.5] },
   ]
 
   return (
@@ -122,7 +124,8 @@ const LandingBanner = () => {
           <QueueAnim
             key="QueueAnim"
             type={['bottom', 'top']}
-            duration={300}
+            delay={1300}
+            duration={1000}
           >
             <BannerTextTitle key="1">
               <TweenOne
@@ -136,7 +139,7 @@ const LandingBanner = () => {
               <BannerTextDescription
                 animation={textAni}
               >
-                <Texty>"Mỗi cuộc gặp gỡ trong đời đều là duyên phận, không có đúng sai."</Texty>
+                <Texty delay={300} duration={800}>"Mỗi cuộc gặp gỡ trong đời đều là duyên phận, không có đúng sai."</Texty>
               </BannerTextDescription>
             </BannerTextContent>
             {/* <TweenOne
