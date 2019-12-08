@@ -38,9 +38,11 @@ const Logo = ({title, image}: Props) => {
 
   return (
     <StyleLogo
+      activeClass="logo"
       id="logo"
       to="logo"
-      spy={true} smooth={true}
+      spy={true}
+      smooth={true}
       onClick={scrollToTop}
     >
       <Image src={image} alt={title} />
