@@ -36,6 +36,10 @@ const Navbar = ({ data }: Props) => {
     setNavVisibility(!isNavVisible);
   };
 
+  const onVisibleNav = () => {
+    setNavVisibility(false);
+  }
+
   const renderMenu = data.data.map((item: any, index: number) => {
     return (
       <Link
@@ -46,6 +50,7 @@ const Navbar = ({ data }: Props) => {
         offset={-70}
         duration= {500}
         key={index}
+        onClick={onVisibleNav}
       >
         {item.name}
       </Link>

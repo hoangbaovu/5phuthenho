@@ -8,8 +8,7 @@ type Props = {
 const Menu = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40px;
-  margin: 0 20px 0 0;
+  margin: -10px 20px 0 0;
   cursor: pointer;
   z-index: 999999;
 
@@ -21,16 +20,15 @@ const Menu = styled.div`
 const MenuLine = styled.span`
   background: ${props => props.theme.palette.primary};
   display: block;
-  height: 5px;
-  margin: 12px 30px 0 0;
+  height: 4px;
+  margin: 10px 0 0 0;
   transition: all .1s ease-in-out;
-  width: 40px;
+  width: 36px;
 
   ${Menu}.active & {
-    width: 40px;
     
     &:nth-child(1) {
-      transform: translateY(17px) rotate(45deg);
+      transform: translateY(14px) rotate(45deg);
     }
     
     &:nth-child(2) {
@@ -38,7 +36,7 @@ const MenuLine = styled.span`
     }
     
     &:nth-child(3) {
-      transform: translateY(-17px) rotate(-45deg);
+      transform: translateY(-14px) rotate(-45deg);
     }
   }
 `;

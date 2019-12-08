@@ -48,7 +48,7 @@ const Content = styled.p`
   }
 
   @media (max-width: 1200px) {
-    padding: 20px;
+    padding: 15px;
     width: 100%;
   }
 `;
