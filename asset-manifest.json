@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.8b76cc27.chunk.css",
-    "main.js": "/static/js/main.01d84b72.chunk.js",
-    "main.js.map": "/static/js/main.01d84b72.chunk.js.map",
+    "main.css": "/static/css/main.4c9ebb48.chunk.css",
+    "main.js": "/static/js/main.c440e7fa.chunk.js",
+    "main.js.map": "/static/js/main.c440e7fa.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0a06e422.js",
     "runtime-main.js.map": "/static/js/runtime-main.0a06e422.js.map",
-    "static/css/2.36787944.chunk.css": "/static/css/2.36787944.chunk.css",
-    "static/js/2.e5b250d5.chunk.js": "/static/js/2.e5b250d5.chunk.js",
-    "static/js/2.e5b250d5.chunk.js.map": "/static/js/2.e5b250d5.chunk.js.map",
+    "static/css/2.87e2190b.chunk.css": "/static/css/2.87e2190b.chunk.css",
+    "static/js/2.d0237063.chunk.js": "/static/js/2.d0237063.chunk.js",
+    "static/js/2.d0237063.chunk.js.map": "/static/js/2.d0237063.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3dba65b5fe740f7c0e37006fb8bad82a.js": "/precache-manifest.3dba65b5fe740f7c0e37006fb8bad82a.js",
+    "precache-manifest.ef1488b4b8ebe3731286975cc45c2a46.js": "/precache-manifest.ef1488b4b8ebe3731286975cc45c2a46.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.36787944.chunk.css.map": "/static/css/2.36787944.chunk.css.map",
-    "static/css/main.8b76cc27.chunk.css.map": "/static/css/main.8b76cc27.chunk.css.map",
+    "static/css/2.87e2190b.chunk.css.map": "/static/css/2.87e2190b.chunk.css.map",
+    "static/css/main.4c9ebb48.chunk.css.map": "/static/css/main.4c9ebb48.chunk.css.map",
     "static/media/bg-love.png": "/static/media/bg-love.bbd01335.png",
     "static/media/carousel-1.jpg": "/static/media/carousel-1.fbb5391f.jpg",
     "static/media/carousel-2.jpg": "/static/media/carousel-2.b6f03840.jpg",
     "static/media/carousel-3.jpg": "/static/media/carousel-3.bba5ef09.jpg",
+    "static/media/Loader.less": "/static/media/logo_loader.c9fa94d2.png",
     "static/media/pose_puzzle_kumiawaseru.png": "/static/media/pose_puzzle_kumiawaseru.7fa9d619.png"
   },
   "entrypoints": [
     "static/js/runtime-main.0a06e422.js",
-    "static/css/2.36787944.chunk.css",
-    "static/js/2.e5b250d5.chunk.js",
-    "static/css/main.8b76cc27.chunk.css",
-    "static/js/main.01d84b72.chunk.js"
+    "static/css/2.87e2190b.chunk.css",
+    "static/js/2.d0237063.chunk.js",
+    "static/css/main.4c9ebb48.chunk.css",
+    "static/js/main.c440e7fa.chunk.js"
   ]
 }
