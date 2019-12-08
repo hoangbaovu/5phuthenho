@@ -77,14 +77,28 @@ const BannerTextDescription = styled(Parallax)`
 // `;
 
 const BannerNext = styled.div`
-  display: inline-block;
+  bottom: 10px;
+  display: block;
+  left: 50%;
   position: absolute;
-  bottom: 10%;
-  left: 0;
   right: 0;
+  transform: translateX(-50%);
+  width: 64px;
+`;
 
-  @media (max-width: 768px) {
-    bottom: 1%;
+const BannerNextLink = styled(Link)`
+  display: block;
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+`;
+
+const BannerNextIcon = styled(Icon)`
+  font-size: 64px;
+  transition: all .1s linear;
+
+  ${BannerNextLink}:active & {
+    transform: translateY(80px);
   }
 `;
 
@@ -142,7 +156,7 @@ const LandingBanner = () => {
             animation={logoAni}
             key="2"
           >
-            <Link
+            <BannerNextLink
               to="introduction"
               activeClass="active"
               spy={true}
@@ -151,8 +165,8 @@ const LandingBanner = () => {
               duration= {1000}
               key="next"
             >
-              <Icon type="arrow-down" style={{ fontSize: '64px' }} />
-            </Link>
+              <BannerNextIcon type="arrow-down" />
+            </BannerNextLink>
           </TweenOne>
         </BannerNext>
       </div>
