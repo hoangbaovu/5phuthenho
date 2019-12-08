@@ -19,6 +19,10 @@ const BannerWrapper = styled.div`
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+
+  @media (max-width: 768px) {
+    background-position: 70% 77px;
+  }
 `;
 
 const BannerTextWrapper = styled.div`
