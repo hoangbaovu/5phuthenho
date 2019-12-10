@@ -5,6 +5,7 @@ import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import QueueAnim from 'rc-queue-anim';
 import styled, { keyframes, css } from 'styled-components';
 import { HeaderTitle } from '../Shared/HeaderTitle';
+import RevealImage from '../Shared/AniImage/RevealImage';
 
 type Props = {
   id: string
@@ -58,17 +59,7 @@ const IntroductionLeft = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-
-const IntroductionLeftImage = styled.img`
-  width: 100%;
-  height: 100%;
-  outline: 10px double #fff;
-  margin-bottom: 50px;
-
-  @media (max-width: 1200px) {
-    width: 100%;
-  }
+  position: relative;
 `;
 
 const IntroductionButton = styled(Link)`
@@ -208,7 +199,7 @@ const LandingIntroduction = ({ id }: Props) => {
           <Row key="row" type="flex">
             <IntroductionCol xs={24} md={10}>
               <IntroductionLeft>
-                <IntroductionLeftImage src="../../../assets/intro.jpg" alt="" />
+                <RevealImage image="../../../assets/intro.jpg" />
                 <IntroductionButton
                   activeClass="active"
                   to="rules"
