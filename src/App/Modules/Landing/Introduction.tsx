@@ -181,6 +181,7 @@ const IntroductionRight = styled.div`
   @media (max-width: 768px) {
     background: #f7e9e8;
     border-radius: 0;
+    border-bottom: 0;
     box-shadow: none;
     margin-top: 0;
     padding: 0;

@@ -39,6 +39,10 @@ const ImageWrapper = styled.div`
   height: 400px;
   position: relative;
   margin: -40px 0 30px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -48,6 +52,10 @@ const ImageContainer = styled.div`
   border-radius: 2px;
   overflow: hidden;
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
 `;
 
 const Image = styled.img`

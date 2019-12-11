@@ -1,6 +1,5 @@
 import React from 'react';
 import { Icon } from 'antd';
-import { Parallax } from 'rc-scroll-anim';
 import { Link } from "react-scroll";
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
@@ -72,14 +71,6 @@ const BannerTextContent = styled.div`
   }
 `;
 
-const BannerTextDescription = styled(Parallax)`
-  filter: blur(0px);
-`;
-
-// const BannerFrame = styled.img`
-//   margin: 50px 0;
-// `;
-
 const BannerNext = styled.div`
   bottom: 10px;
   display: block;
@@ -115,12 +106,6 @@ const LandingBanner = () => {
     duration: 900,
   }
 
-  const textAni: Object = [
-    { x: 0, opacity: 1, playScale: [0, 0.2] },
-    { y: 10, playScale: [0, 0.3] },
-    { blur: '10px', playScale: [0, 0.5] },
-  ]
-
   return (
     <BannerWrapper>
       <div className="container">
@@ -140,22 +125,8 @@ const LandingBanner = () => {
               </TweenOne>
             </BannerTextTitle>
             <BannerTextContent key="3">
-              <BannerTextDescription
-                animation={textAni}
-              >
-                <Texty delay={300} duration={800}>"Mỗi cuộc gặp gỡ trong đời đều là duyên phận, không có đúng sai."</Texty>
-              </BannerTextDescription>
+              <Texty delay={300} duration={800}>"Mỗi cuộc gặp gỡ trong đời đều là duyên phận, không có đúng sai."</Texty>
             </BannerTextContent>
-            {/* <TweenOne
-              animation={{ 
-                scale: 1, 
-                duration: 1000,
-                delay: 3500,
-              }}
-              style={{ transform: 'scale(0)' }}
-            >
-              <BannerFrame key="4" src="../../../../assets/title_frame.png" alt=""/>
-            </TweenOne> */}
           </QueueAnim>
         </BannerTextWrapper>
         <BannerNext key="next">
