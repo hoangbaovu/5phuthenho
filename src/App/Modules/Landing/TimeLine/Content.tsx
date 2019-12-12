@@ -1,14 +1,22 @@
 import React from 'react';
 import { Timeline, Icon } from 'antd';
+import useSmallScreen from '../../Shared/Responsive/useSmallScreen';
 import TimelineTime from './Time';
 import TimelineTitle from './Title';
 import TimeLineItemContent from './ItemContent';
 
 const TimeLineContent = () => {
-  
-const clockIcon = <Icon type="clock-circle-o" />;
+
+  const isSmallScreen = useSmallScreen();
+  const timelineMode = isSmallScreen ? 'left' : 'alternate';
+  const clockIcon = <Icon type="clock-circle-o" />;
+  const styleTimeline: object = { 
+    overflowX: "hidden",
+    padding: "20px 10px"
+  }
+
   return (
-    <Timeline mode="alternate" style={{ overflowX: "hidden", padding: "20px 0" }}>
+    <Timeline mode={timelineMode} style={styleTimeline}>
       <Timeline.Item dot={clockIcon}>
         <TimelineTime>13:45</TimelineTime>
         <TimelineTitle>Đón Khách <Icon type="heart" /></TimelineTitle>
