@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-scroll";
 
 import { CSSTransition } from 'react-transition-group';
+import useSmallScreen from '../Shared/Responsive/useSmallScreen';
 import Logo from './Logo';
 import BurgerMenu from './BurgerMenu';
 import './less/Navbar.less';
@@ -12,25 +13,8 @@ type Props = {
 
 const Navbar = ({ data }: Props) => {
   const [isNavVisible, setNavVisibility] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    mediaQuery.addListener(handleMediaQueryChange);
-    handleMediaQueryChange(mediaQuery);
-
-    return () => {
-      mediaQuery.removeListener(handleMediaQueryChange);
-    };
-  }, []);
-
-  const handleMediaQueryChange = (mediaQuery: any) => {
-    if (mediaQuery.matches) {
-      setIsSmallScreen(true);
-    } else {
-      setIsSmallScreen(false);
-    }
-  };
+  const isSmallScreen = useSmallScreen();
 
   const toggleNav = () => {
     setNavVisibility(!isNavVisible);
