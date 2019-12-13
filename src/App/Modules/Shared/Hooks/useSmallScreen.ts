@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-const useSmallScreen = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+const useSmallScreen = (): boolean => {
+  const [smallScreen, setSmallScreen] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
@@ -11,17 +11,17 @@ const useSmallScreen = () => {
     return () => {
       mediaQuery.removeListener(handleMediaQueryChange);
     };
-  }, []);
+  }, [smallScreen]);
 
   const handleMediaQueryChange = (mediaQuery: any) => {
     if (mediaQuery.matches) {
-      setIsSmallScreen(true);
+      setSmallScreen(true);
     } else {
-      setIsSmallScreen(false);
+      setSmallScreen(false);
     }
   };
 
-  return isSmallScreen;
+  return smallScreen;
 }
 
 export default useSmallScreen;
