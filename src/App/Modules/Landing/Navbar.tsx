@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-scroll";
 
 import { CSSTransition } from 'react-transition-group';
-import useSmallScreen from '../Shared/Hooks/useSmallScreen';
+import { useSmallScreen } from '../Shared/Hooks';
 import Logo from './Logo';
 import BurgerMenu from './BurgerMenu';
 import './less/Navbar.less';

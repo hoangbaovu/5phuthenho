@@ -1,6 +1,6 @@
 import React from 'react';
 import { Timeline, Icon } from 'antd';
-import useSmallScreen from '../../Shared/Hooks/useSmallScreen';
+import { useSmallScreen } from '../../Shared/Hooks';
 import TimelineTime from './Time';
 import TimelineTitle from './Title';
 import TimeLineItemContent from './ItemContent';
