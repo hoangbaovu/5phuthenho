@@ -30,7 +30,7 @@ const LandingCarousel = ({ id }: Props) => {
               key="bg"
               className="carousel__bg"
               style={{
-                backgroundImage: `url(${require("../../../assets/carousel/carousel-1.jpg")})`,
+                backgroundImage: `url(${require("../../assets/carousel/carousel-1.jpg")})`,
               }}
             />
           </Element>
@@ -41,7 +41,7 @@ const LandingCarousel = ({ id }: Props) => {
               key="bg"
               className="carousel__bg"
               style={{
-                backgroundImage: `url(${require("../../../assets/carousel/carousel-2.jpg")})`,
+                backgroundImage: `url(${require("../../assets/carousel/carousel-2.jpg")})`,
               }}
             />
           </Element>
@@ -52,7 +52,7 @@ const LandingCarousel = ({ id }: Props) => {
               key="bg"
               className="carousel__bg"
               style={{
-                backgroundImage: `url(${require("../../../assets/carousel/carousel-3.jpg")})`,
+                backgroundImage: `url(${require("../../assets/carousel/carousel-3.jpg")})`,
               }}
             />
           </Element>

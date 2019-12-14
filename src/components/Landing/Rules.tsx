@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import QueueAnim from 'rc-queue-anim';
-import { HeaderTitle } from '../Shared/HeaderTitle';
+import { HeaderTitle } from '../../shared/HeaderTitle';
 import './less/Rules.less';
 
 type Props = {
@@ -28,7 +28,7 @@ const LandingRules = ({ id }: Props) => {
           <br />
           Chúc mừng bạn đã có một mùa đông không lạnh!!!
         </p>
-        <img key="image" className="Rules__pose" src={require("../../../assets/pose_puzzle_kumiawaseru.png")} alt=""/>
+        <img key="image" className="Rules__pose" src={require("../../assets/pose_puzzle_kumiawaseru.png")} alt=""/>
       </QueueAnim>
     </ScrollOverPack>
   )

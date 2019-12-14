@@ -2,7 +2,7 @@ import React from 'react';
 import { Row } from 'antd';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import QueueAnim from 'rc-queue-anim';
-import { HeaderTitle } from '../Shared/HeaderTitle';
+import { HeaderTitle } from '../../shared/HeaderTitle';
 import LandingGuestsInfo from './GuestsInfo';
 import './less/Guests.less';
 

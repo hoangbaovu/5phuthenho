@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import QueueAnim from 'rc-queue-anim';
-import { HeaderTitle } from '../../Shared/HeaderTitle';
+import { HeaderTitle } from '../../../shared/HeaderTitle';
 import styled from 'styled-components';
 import TimeLineContent from './Content';
 
@@ -11,7 +11,7 @@ type Props = {
 }
 
 const TimeLineWrapper = styled(ScrollOverPack)`
-  background: url(../../../../assets/bg_timeline.jpg) repeat;
+  background: url(../../../assets/bg_timeline.jpg) repeat;
   background-position: top center;
   padding: 100px 0;
   min-height: 100vh;

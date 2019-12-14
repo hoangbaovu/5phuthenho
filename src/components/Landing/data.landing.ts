@@ -38,7 +38,7 @@ export const LandingGuestsData = {
       info: {
         name: 'Điềm',
         subTitle: '',
-        image: '../../../assets/guests/guest-12.png'
+        image: '../../assets/guests/guest-12.png'
       }
     },
     {
@@ -48,7 +48,7 @@ export const LandingGuestsData = {
       info: {
         name: 'Tarot Reader',
         subTitle: '',
-        image: '../../../assets/guests/tarot_uranai_woman.png'
+        image: '../../assets/guests/tarot_uranai_woman.png'
       }
     },
     {
@@ -58,7 +58,7 @@ export const LandingGuestsData = {
       info: {
         name: 'Hanie',
         subTitle: '',
-        image: '../../../assets/guests/guest-32.png'
+        image: '../../assets/guests/guest-32.png'
       }
     }
   ]
@@ -78,22 +78,22 @@ export const LandingAddressData = {
 }
 
 export const LandingSponsorData = {
-  source: '../../../../assets/video.mp4',
+  source: '../../../assets/video.mp4',
   data: [
     {
       name: "Bảo Bình - Aquarius",
       path: '//fb.com/baobinhaquarius',
-      source: '../../../../assets/sponsor/aquarius.jpg',
+      source: '../../../assets/sponsor/aquarius.jpg',
     },
     {
       name: "Bảo Bình Radio",
       path: '//fb.com/baobinhradio',
-      source: '../../../../assets/sponsor/bbradio.jpg',
+      source: '../../../assets/sponsor/bbradio.jpg',
     },
     {
       name: "5 Phút Hẹn Hò",
       path: '//fb.com/5phuthenho',
-      source: '../../../../assets/sponsor/5phuthenho.jpg',
+      source: '../../../assets/sponsor/5phuthenho.jpg',
     },
   ]
 }

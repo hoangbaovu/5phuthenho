@@ -22,7 +22,7 @@ const SLink = styled(Link)`
 
   &:after {
     content: '';
-    background: url(${require('../../../../assets/bg-love.png')}) no-repeat;
+    background: url(${require('../../assets/bg-love.png')}) no-repeat;
     position: absolute;
     top: -50px;
     left: 50%;

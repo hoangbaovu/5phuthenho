@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-scroll";
 
 import { CSSTransition } from 'react-transition-group';
-import { useSmallScreen } from '../Shared/Hooks';
+import { useSmallScreen } from '../../shared/hooks';
 import Logo from './Logo';
 import BurgerMenu from './BurgerMenu';
 import './less/Navbar.less';
@@ -45,7 +45,7 @@ const Navbar = ({ data }: Props) => {
     <div className="Navbar">
       <Logo
         title="Logo"
-        image={require("../../../assets/logo.png")}
+        image={require("../../assets/logo.png")}
       />
       <CSSTransition
         in={!isSmallScreen || isNavVisible}

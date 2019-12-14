@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import createTheme from './theme/index';
 import GlobalStyle from './theme/globalStyle';
-import Landing from './App/Modules/Landing';
-import './App/Loader.less';
-import Loader from './App/Modules/Shared/Loader/Loader';
+import Landing from './components/Landing';
+import Loader from './shared/Loader/Loader';
 
 const App: React.FC = () => {  
 

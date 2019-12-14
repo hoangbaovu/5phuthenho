@@ -4,8 +4,8 @@ import { Link } from "react-scroll";
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import QueueAnim from 'rc-queue-anim';
 import styled, { keyframes, css } from 'styled-components';
-import { HeaderTitle } from '../Shared/HeaderTitle';
-import RevealImage from '../Shared/AniImage/RevealImage';
+import { HeaderTitle } from '../../shared/HeaderTitle';
+import RevealImage from '../../shared/AniImage/RevealImage';
 
 type Props = {
   id: string
@@ -200,7 +200,7 @@ const LandingIntroduction = ({ id }: Props) => {
           <Row key="row" type="flex">
             <IntroductionCol xs={24} md={10}>
               <IntroductionLeft>
-                <RevealImage image="../../../assets/intro.jpg" />
+                <RevealImage image="../../assets/intro.jpg" />
                 <IntroductionButton
                   activeClass="active"
                   to="rules"
