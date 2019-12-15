@@ -67,13 +67,19 @@ const LandingVideo = ({ id, data }: Props) => {
 
   const renderSponsor = data.data.map((item: any, index: number) => {
     return (
-      <SponsorLink href={item.path} key={index} target="_blank">
+      <SponsorLink href={item.path} key={index} target="_blank" title={item.name}>
         <SponsorLogo src={item.source} alt={item.name} />
       </SponsorLink>
     )
   });
 
-  const renderVideo = isSmallScreen || <source src={data.source} type="video/mp4" />
+  const renderVideoType = data.type.map((item: string, index: number) => {
+    return (
+      <source src={`${data.source}.${item}`} type={`video/${item}`} key={index} />
+    )
+  });
+
+  const renderVideo = isSmallScreen || renderVideoType;
 
   return (
     <VideoWrapper id={id}>
@@ -84,7 +90,7 @@ const LandingVideo = ({ id, data }: Props) => {
           </SponsorContainer>
         </div>
       </VideoContent>
-      <VideoBackground autoPlay muted loop poster={data.poster}>
+      <VideoBackground autoPlay muted loop poster={`${data.source}.${data.poster}`}>
         {renderVideo}
       </VideoBackground>
     </VideoWrapper>
