@@ -73,6 +73,8 @@ const LandingVideo = ({ id, data }: Props) => {
     )
   });
 
+  const renderVideo = isSmallScreen || <source src={data.source} type="video/mp4" />
+
   return (
     <VideoWrapper id={id}>
       <VideoContent>
@@ -82,10 +84,8 @@ const LandingVideo = ({ id, data }: Props) => {
           </SponsorContainer>
         </div>
       </VideoContent>
-      <VideoBackground autoPlay muted loop>
-        {
-          isSmallScreen || <source src={data.source} type="video/mp4" />
-        }
+      <VideoBackground autoPlay muted loop poster={data.poster}>
+        {renderVideo}
       </VideoBackground>
     </VideoWrapper>
   )

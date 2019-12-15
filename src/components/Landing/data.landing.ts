@@ -79,6 +79,7 @@ export const LandingAddressData = {
 
 export const LandingSponsorData = {
   source: '../../../assets/video.mp4',
+  poster: '../../../assets/video.png',
   data: [
     {
       name: "Bảo Bình - Aquarius",
