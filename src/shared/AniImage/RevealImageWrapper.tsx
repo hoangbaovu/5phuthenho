@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   position: relative;
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 100% !important;
   }
 `;
 

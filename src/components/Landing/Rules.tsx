@@ -15,7 +15,7 @@ const RulesContainer = styled.div`
   // background: #f0f2f5 url(../../assets/rules.jpg) no-repeat top right;
 
   padding: 100px 0 0;
-  min-height: 800px;
+  min-height: 600px;
   overflow: hidden;
 `;
 
@@ -32,7 +32,13 @@ const RulesParagraph = styled.p`
     width: 100%;
     text-align: justify;
   }
-`
+`;
+
+const RulesLeft = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100%;
+`;
 
 const LandingRules = ({ id }: Props) => {
   return (
@@ -47,17 +53,19 @@ const LandingRules = ({ id }: Props) => {
         </div>
         <Row type="flex" justify="center">
           <Col sm={24} md={24} lg={24} xl={24} xxl={8}>
-            <RulesParagraph>
-              Đơn giản là sẽ có 20 bạn nam và 20 bạn nữ cùng tham gia, mỗi cặp sẽ có 5 phút để trò chuyện với nhau nhưng không được phép lộ thông tin cá nhân của mình.
-              Hết 5 phút chuyện trò, bạn nữ ngồi im tại chỗ còn bạn nam đứng lên di chuyển sang bàn bên cạnh.
-              Vậy thì quá tuyệt khi một buổi chiều được gặp gỡ tận 20 người khác giới, trò chuyện và làm quen cùng họ.
-              Và còn tuyệt hơn nữa nếu cô gái hay chàng trai bạn thích cũng chọn bạn ở cuối chương trình!!!
-              <br />
-              Chúc mừng bạn đã có một mùa đông không lạnh!!!
-            </RulesParagraph>
+            <RulesLeft>
+              <RulesParagraph>
+                Đơn giản là sẽ có 20 bạn nam và 20 bạn nữ cùng tham gia, mỗi cặp sẽ có 5 phút để trò chuyện với nhau nhưng không được phép lộ thông tin cá nhân của mình.
+                Hết 5 phút chuyện trò, bạn nữ ngồi im tại chỗ còn bạn nam đứng lên di chuyển sang bàn bên cạnh.
+                Vậy thì quá tuyệt khi một buổi chiều được gặp gỡ tận 20 người khác giới, trò chuyện và làm quen cùng họ.
+                Và còn tuyệt hơn nữa nếu cô gái hay chàng trai bạn thích cũng chọn bạn ở cuối chương trình!!!
+                <br />
+                Chúc mừng bạn đã có một mùa đông không lạnh!!!
+              </RulesParagraph>
+            </RulesLeft>
           </Col>
-          <Col xs={24} md={24} lg={24} xl={24} xxl={6}>
-            <RevealImage image="../../assets/rules.jpg" start="left" width="900" height="600" />
+          <Col xs={24} md={24} lg={24} xl={15} xxl={6}>
+            <RevealImage image="../../assets/rules.jpg" start="left" width="872" height="600" />
           </Col>
         </Row>
       </QueueAnim>

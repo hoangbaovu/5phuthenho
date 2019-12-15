@@ -18,6 +18,7 @@ const Introduction = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 `;
 
 const IntroductionCol = styled(Col)`
