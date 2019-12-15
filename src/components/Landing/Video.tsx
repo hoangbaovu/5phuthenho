@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSmallScreen } from '../../shared/hooks';
 
 type Props = {
   id: string,
@@ -8,9 +9,6 @@ type Props = {
 
 const VideoWrapper = styled.div`
   position: relative;
-  @media(max-width: 1200px) {
-    display: none;
-  }
 `;
 
 const VideoContent = styled.div`
@@ -23,10 +21,6 @@ const VideoContent = styled.div`
   z-index: 9;
 `;
 
-const VideoParagraph = styled.p`
-  font-size: 2em;
-`;
-
 const VideoBackground = styled.video`
   position: static;
   width: 100%;
@@ -35,6 +29,10 @@ const VideoBackground = styled.video`
   top: 0;
   filter: blur(2px);
   object-fit: fill;
+
+  @media (max-width: 768px) {
+    height: 250px;
+  }
 `;
 
 const SponsorContainer = styled.div`
@@ -44,7 +42,7 @@ const SponsorContainer = styled.div`
 `;
 
 const SponsorLink = styled.a`
-
+  cursor: pointer;
 `;
 
 const SponsorLogo = styled.img`
@@ -56,13 +54,20 @@ const SponsorLogo = styled.img`
   ${SponsorLink}:hover & {
     opacity: .8;
   }
+
+  @media (max-width: 768px) {
+    margin: 0 5px;
+    width: 100px;
+  }
 `;
 
 const LandingVideo = ({ id, data }: Props) => {
 
+  const isSmallScreen = useSmallScreen();
+
   const renderSponsor = data.data.map((item: any, index: number) => {
     return (
-      <SponsorLink href={item.path} key={index}>
+      <SponsorLink href={item.path} key={index} target="_blank">
         <SponsorLogo src={item.source} alt={item.name} />
       </SponsorLink>
     )
@@ -72,16 +77,15 @@ const LandingVideo = ({ id, data }: Props) => {
     <VideoWrapper id={id}>
       <VideoContent>
         <div className="container">
-          <VideoParagraph>
-            {/* Trong tình yêu chẳng có ranh giới nào hoàn toàn cho việc đúng hay sai. Vì thế hãy cứ yêu hết lòng, hãy cứ làm những điều mình thích. Khi điều ấy không làm tổn thương đến người khác. Cũng đừng vì bất cứ ai mà làm tổn thương chính mình. Khi ai đó rời bỏ bạn hãy cứ tin rằng duyên phận của 2 người đã hết. Đừng vì bất cứ ai mà làm tổn thương chính mình, khi ai đó rời bỏ bạn hãy cứ tin rằng duyên phận giữa hai người đã hết. Đừng đặt nặng quá nhiều ở việc lỗi do ai, đừng nghĩ làm gì những việc đúng sai trong tình yêu. */}
-          </VideoParagraph>
           <SponsorContainer>
             {renderSponsor}
           </SponsorContainer>
         </div>
       </VideoContent>
       <VideoBackground autoPlay muted loop>
-        <source src={data.source} type="video/mp4" />
+        {
+          isSmallScreen || <source src={data.source} type="video/mp4" />
+        }
       </VideoBackground>
     </VideoWrapper>
   )
