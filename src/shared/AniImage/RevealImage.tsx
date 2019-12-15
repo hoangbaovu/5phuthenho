@@ -1,9 +1,12 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
+import RevealImageWrapper from './RevealImageWrapper';
 
 type Props = {
   image: string,
   start?: string,
+  width?: any,
+  height?: any,
 }
 
 const aniImage = keyframes`
@@ -63,18 +66,6 @@ const aniOverlayLeft = keyframes`
   }
 `;
 
-
-const ImageWrapper = styled.div`
-  width: 600px;
-  height: 400px;
-  position: relative;
-  margin: -40px 0 30px;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`;
-
 const ImageContainer = styled.div`
   position: absolute;
   width: 100%;
@@ -117,7 +108,7 @@ const ImageOverlayRight = styled.div`
   animation: ${aniOverlayRight} 2s;
 `;
 
-const RevealImage = ({ image, start }: Props) => {
+const RevealImage = ({ image, start, width, height }: Props) => {
 
   const renderImageOverlay = (start: string = 'left') => {
     switch(start) {
@@ -129,12 +120,12 @@ const RevealImage = ({ image, start }: Props) => {
   }
 
   return (
-    <ImageWrapper>
+    <RevealImageWrapper width={width} height={height}>
       <ImageContainer>
         <Image src={image} alt="" />
           {renderImageOverlay(start)}
       </ImageContainer>
-    </ImageWrapper>
+    </RevealImageWrapper>
   )
 }
 

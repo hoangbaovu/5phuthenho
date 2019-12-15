@@ -71,7 +71,7 @@ const IntroductionButton = styled(Link)`
   align-items: center;
 
   position: relative;
-  margin: auto;
+  margin: 30px 0;
   transition: all .2s ease;
 
   &:hover {
@@ -188,6 +188,10 @@ const IntroductionRight = styled.div`
   }
 `;
 
+const IntroductionLeftImage = styled(RevealImage)`
+  margin: -40px 0 30px !important;
+`;
+
 const LandingIntroduction = ({ id }: Props) => {
   return (
     <ScrollOverPack id={id} component={Introduction}>
@@ -200,7 +204,7 @@ const LandingIntroduction = ({ id }: Props) => {
           <Row key="row" type="flex">
             <IntroductionCol xs={24} md={10}>
               <IntroductionLeft>
-                <RevealImage image="../../assets/intro.jpg" start="right" />
+                <IntroductionLeftImage image="../../assets/intro.jpg" start="right" width="600" height="400" />
                 <IntroductionButton
                   activeClass="active"
                   to="rules"
@@ -210,7 +214,7 @@ const LandingIntroduction = ({ id }: Props) => {
                   duration= {1500}
                   key="rules2"
                 >
-                  <IntroductionButtonSpan>Đăng ký</IntroductionButtonSpan>
+                  <IntroductionButtonSpan>Thể lệ</IntroductionButtonSpan>
                   <IntroductionButtonSVG viewBox="0 0 13 10">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
