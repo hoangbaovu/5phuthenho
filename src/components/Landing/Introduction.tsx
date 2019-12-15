@@ -200,7 +200,7 @@ const LandingIntroduction = ({ id }: Props) => {
           <Row key="row" type="flex">
             <IntroductionCol xs={24} md={10}>
               <IntroductionLeft>
-                <RevealImage image="../../assets/intro.jpg" />
+                <RevealImage image="../../assets/intro.jpg" start="right" />
                 <IntroductionButton
                   activeClass="active"
                   to="rules"

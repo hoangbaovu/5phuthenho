@@ -1,8 +1,9 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 type Props = {
   image: string,
+  start?: string,
 }
 
 const aniImage = keyframes`
@@ -15,24 +16,53 @@ const aniImage = keyframes`
   }
 `;
 
-const aniOverlay = keyframes`
+const aniOverlay = css`
   0% {
     transform: scaleX(0);
-    transform-origin: 0% 50%;
   }
   50% {
     transform: scaleX(1);
-    transform-origin: 0% 50%;
   }
   51% {
     transform: scaleX(1);
-    transform-origin: 100% 50%;
   }
   100% {
     transform: scaleX(0);
+  }
+`;
+
+const aniOverlayRight = keyframes`
+  ${aniOverlay}
+  0% {
+    transform-origin: 100% 50%;
+  }
+  50% {
+    transform-origin: 100% 50%;
+  }
+  51% {
+    transform-origin: 0% 50%;
+  }
+  100% {
+    transform-origin: 0 50%;
+  }
+`;
+
+const aniOverlayLeft = keyframes`
+  ${aniOverlay}
+  0% {
+    transform-origin: 0% 50%;
+  }
+  50% {
+    transform-origin: 0% 50%;
+  }
+  51% {
+    transform-origin: 100% 50%;
+  }
+  100% {
     transform-origin: 100% 50%;
   }
 `;
+
 
 const ImageWrapper = styled.div`
   width: 600px;
@@ -68,22 +98,41 @@ const Image = styled.img`
   animation: ${aniImage} 2s forwards;
 `;
 
-const ImageOverlay = styled.div`
+const ImageOverlay = css`
   width: 100%;
   height: 100%;
   background-color: ${props => props.theme.palette.primary };
   position: absolute;
   transform: scaleX(0);
   transform-origin: 0% 50%;
-  animation: ${aniOverlay} 2s;
 `;
 
-const RevealImage = ({ image }: Props) => {
+const ImageOverlayLeft = styled.div`
+  ${ImageOverlay}
+  animation: ${aniOverlayLeft} 2s;
+`;
+
+const ImageOverlayRight = styled.div`
+  ${ImageOverlay}
+  animation: ${aniOverlayRight} 2s;
+`;
+
+const RevealImage = ({ image, start }: Props) => {
+
+  const renderImageOverlay = (start: string = 'left') => {
+    switch(start) {
+      case 'right':
+        return <ImageOverlayRight />
+      default:
+        return <ImageOverlayLeft />
+    }
+  }
+
   return (
     <ImageWrapper>
       <ImageContainer>
         <Image src={image} alt="" />
-          <ImageOverlay></ImageOverlay>
+          {renderImageOverlay(start)}
       </ImageContainer>
     </ImageWrapper>
   )
