@@ -9,16 +9,22 @@ type Props = {
 }
 
 const Title = styled.h2`
-  font-size: ${props => props.theme.typography.fontSizeH4};
+  font-size: ${props => props.theme.typography.fontSizeH2};
   font-weight: ${props => props.theme.typography.fontWeightBold};
   text-align: center;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   letter-spacing: .4em;
-  margin-bottom: 80px;
+  margin: 200px 0 80px 0;
+
+  @media (max-width: 768px) {
+    font-size: ${props => props.theme.typography.fontSizeH4};
+    margin: 0 0 80px 0;
+  }
 `;
 
 const SLink = styled(Link)`
   position: relative;
+  color: #312c38;
 
   &:after {
     content: '';
@@ -36,7 +42,7 @@ const SLink = styled(Link)`
   }
 `;
 
-export const HeaderTitle = ({ id = "#", title, path = "/"}: Props) => {
+export const HeaderTitleLarge = ({ id = "#", title, path = "/"}: Props) => {
   return (
     <Title>
       <SLink
@@ -49,3 +55,5 @@ export const HeaderTitle = ({ id = "#", title, path = "/"}: Props) => {
     </Title>
   )
 }
+
+export default HeaderTitleLarge;
