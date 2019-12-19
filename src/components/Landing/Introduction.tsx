@@ -31,6 +31,7 @@ const RulesParagraph = styled.p`
   @media (max-width: 1200px) {
     padding: 15px;
     width: 100%;
+    text-align: justify;
   }
 `;
 
