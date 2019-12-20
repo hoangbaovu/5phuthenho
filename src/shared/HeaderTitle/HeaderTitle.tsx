@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Link } from "react-scroll";
+import styled from 'styled-components';
 
 type Props = {
   id?: string,
@@ -19,6 +19,7 @@ const Title = styled.h2`
 
 const SLink = styled(Link)`
   position: relative;
+  color: ${props => props.theme.palette.black};
 
   &:after {
     content: '';

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Row, Col } from 'antd';
-import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import QueueAnim from 'rc-queue-anim';
 import { HeaderTitleLarge } from '../../shared/HeaderTitle';
-import styled from 'styled-components';
+import { Row, Col } from 'antd';
+import QueueAnim from 'rc-queue-anim';
 import RevealImage from '../../shared/AniImage/RevealImage';
+import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+import styled from 'styled-components';
 
 type Props = {
   id: string

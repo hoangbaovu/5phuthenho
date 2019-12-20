@@ -9,10 +9,10 @@ type Props = {
 }
 
 const Title = styled.h2`
-  font-size: ${props => props.theme.typography.fontSizeH2};
+  font-size: ${props => props.theme.typography.fontSizeH3};
   font-weight: ${props => props.theme.typography.fontWeightBold};
   text-align: center;
-  // text-transform: uppercase;
+  text-transform: uppercase;
   letter-spacing: .4em;
   margin: 200px 0 80px 0;
 
@@ -24,7 +24,7 @@ const Title = styled.h2`
 
 const SLink = styled(Link)`
   position: relative;
-  color: #312c38;
+  color: ${props => props.theme.palette.black};
 
   &:after {
     content: '';
