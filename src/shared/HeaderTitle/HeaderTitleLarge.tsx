@@ -13,7 +13,7 @@ const Title = styled.h2`
   font-weight: ${props => props.theme.typography.fontWeightBold};
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .4em;
+  letter-spacing: .3em;
   margin: 200px 0 80px 0;
 
   @media (max-width: 768px) {
