@@ -10,7 +10,7 @@ type Props = {
   id: string
 }
 
-const RulesContainer = styled.div`
+const IntroductionContainer = styled.div`
   background: #f0f2f5;
   // background: #f0f2f5 url(../../assets/rules.jpg) no-repeat top right;
 
@@ -44,7 +44,7 @@ const RulesLeft = styled.div`
 
 const LandingIntroduction = ({ id }: Props) => {
   return (
-    <ScrollOverPack id={id} component={RulesContainer}>
+    <ScrollOverPack id={id} component={IntroductionContainer}>
       <QueueAnim
         key="text"
         leaveReverse
