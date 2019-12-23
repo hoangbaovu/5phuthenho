@@ -19,7 +19,7 @@ const IntroductionContainer = styled.div`
   overflow: hidden;
 `;
 
-const RulesParagraph = styled.p`
+const IntroductionParagraph = styled.p`
   font-size: 20px;
   line-height: 2em;
   text-align: center;
@@ -58,14 +58,14 @@ const LandingIntroduction = ({ id }: Props) => {
             <Col sm={24} md={24} lg={12} xl={12} xxl={8}>
               <RulesLeft>
                 <HeaderTitleLarge title="Giới Thiệu" id={id} />
-                <RulesParagraph>
+                <IntroductionParagraph>
                   Giữa cuộc sống hiện đại, chúng ta dường như đã quá vội vã, ồn ào mà bỏ quên những điều lặng lẽ, những chân tình ngày nào.
                   Sống vội, yêu vội, hay đâu đó có người còn chưa bắt kịp với nhịp yêu đương thời hiện đại.
                   Vậy xin mời bạn hãy bỏ điện thoại xuống, chúng ta hãy cùng nhau ngồi đây chuyện trò, kể cho nhau nghe những điều chân thật nhất của con người mình.
                   Đâu đó những tâm hồn sẽ chậm rãi tìm thấy nhau, những ánh mắt sẽ tình cờ chạm thấy nhau.
                   <br />
                   Chúng tôi gọi đó là duyên! Bạn đã sẵn sàng cho một tháng 12 ngọt ngào?
-                </RulesParagraph>
+                </IntroductionParagraph>
               </RulesLeft>
             </Col>
           </Row>
