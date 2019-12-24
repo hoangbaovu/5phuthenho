@@ -34,7 +34,7 @@ const IntroductionParagraph = styled.p`
   }
 `;
 
-const RulesLeft = styled.div`
+const IntroductionLeft = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -56,7 +56,7 @@ const LandingIntroduction = ({ id }: Props) => {
               <RevealImage image="../../assets/intro.jpg" start="left" height="600" />
             </Col>
             <Col sm={24} md={24} lg={12} xl={12} xxl={8}>
-              <RulesLeft>
+              <IntroductionLeft>
                 <HeaderTitleLarge title="Giới Thiệu" id={id} />
                 <IntroductionParagraph>
                   Giữa cuộc sống hiện đại, chúng ta dường như đã quá vội vã, ồn ào mà bỏ quên những điều lặng lẽ, những chân tình ngày nào.
@@ -66,7 +66,7 @@ const LandingIntroduction = ({ id }: Props) => {
                   <br />
                   Chúng tôi gọi đó là duyên! Bạn đã sẵn sàng cho một tháng 12 ngọt ngào?
                 </IntroductionParagraph>
-              </RulesLeft>
+              </IntroductionLeft>
             </Col>
           </Row>
           </div>
