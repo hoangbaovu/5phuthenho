@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Switch, Route } from "react-router-dom";
 import { ThemeProvider } from 'styled-components';
 import createTheme from './theme/index';
 import GlobalStyle from './theme/globalStyle';
-import Landing from './components/Landing';
 import Loader from './shared/Loader/Loader';
+import Routes from './Routes';
 
 const App: React.FC = () => {  
 
@@ -15,10 +16,21 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Loader isLoader={!loader} />
       <GlobalStyle />
+      <Loader isLoader={!loader} />
       <ThemeProvider theme={createTheme}>
-        <Landing />
+        <Switch>
+          {
+          Routes.map((route: any) => {
+            return <Route
+                exact
+                path={route.path}
+                component={route.component}
+                key={route.path}
+              />
+            })
+          }
+        </Switch>
       </ThemeProvider>
     </>
   );

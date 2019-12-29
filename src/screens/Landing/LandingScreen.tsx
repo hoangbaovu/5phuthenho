@@ -1,1 +1,0 @@
-import Landing from '../../components/Landing/index';

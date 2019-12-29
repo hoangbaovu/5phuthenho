@@ -4,6 +4,7 @@
   "homepage": "https://5phuthenho.ineo.vn",
   "private": true,
   "dependencies": {
+    "@loadable/component": "^5.11.0",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.12",
     "@types/prop-types": "^15.7.3",
@@ -27,6 +28,7 @@
     "react": "^16.12.0",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "react-scroll": "^1.7.14",
     "react-transition-group": "^4.3.0",
@@ -55,5 +57,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/loadable__component": "^5.10.0"
   }
 }
