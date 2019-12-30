@@ -1,6 +1,7 @@
 export interface Typography {
   fontFamily: string;
   fontFamilySecondary: string;
+  fontFamilyDefaultSystem: string;
   fontSizeH1: string;
   fontSizeH2: string;
   fontSizeH3: string;
@@ -23,6 +24,7 @@ const createTypography = (typography: TypographyInput): Typography => {
   const {
     fontFamily = defaultFontFamily,
     fontFamilySecondary = "'Pacifico', cursive",
+    fontFamilyDefaultSystem = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
 
     /* sizes */
     fontSize = 14,
@@ -40,6 +42,7 @@ const createTypography = (typography: TypographyInput): Typography => {
   return {
     fontFamily,
     fontFamilySecondary,
+    fontFamilyDefaultSystem,
     fontSizeH1: pxToRem(96),
     fontSizeH2: pxToRem(60),
     fontSizeH3: pxToRem(48),

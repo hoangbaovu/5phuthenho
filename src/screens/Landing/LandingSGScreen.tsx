@@ -21,8 +21,7 @@ import {
   LandingAddress,
 } from '../../components/Landing';
 
-import Loader from '../../components/Loader/Loader';
-
+import { Loader } from '../../components/Loader';
 import { useLoaderScreen } from '../../shared/hooks';
 
 const { Content, Footer } = Layout;
