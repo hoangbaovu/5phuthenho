@@ -73,8 +73,18 @@ export const LandingTimeLineData = {
 
 export const LandingAddressData = {
   heading: 'Địa điểm',
-  nameAddress: 'Gemini Coffee',
-  location: '347 Nguyễn Khang, Q.Cầu Giấy, Hà Nội',
+  'hanoi': {
+    address: 'Gemini Coffee',
+    location: '347 Nguyễn Khang, Quận Cầu Giấy, Hà Nội',
+  },
+  'saigon': {
+    address: 'Đang cập nhật...',
+    location: 'Đang cập nhật...',
+  },
+  'danang': {
+    address: 'Đang cập nhật...',
+    location: 'Đang cập nhật...',
+  }
 }
 
 export const LandingSponsorData = {

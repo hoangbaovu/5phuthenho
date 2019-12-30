@@ -41,7 +41,7 @@ const LandingHNScreen = () => {
           <LandingRules key="rules" id="rules" />
           <LandingGuests key="guests" id="guests" data={LandingGuestsData} />
           <LandingTimeline key="timeline" id="timeline" data={LandingTimeLineData} />
-          <LandingAddress key="address" id="address" data={LandingAddressData} />
+          <LandingAddress key="address" id="address" data={LandingAddressData} city="hanoi" />
           <LandingVideo key="video" id="video" data={LandingSponsorData} />
         </Content>
         <Footer style={{ textAlign: 'center' }}>©2019 Made with ❤ by <a href="//fb.com/baobinhaquarius" target="_blank" rel="noopener noreferrer">Bảo Bình - Aquarius</a></Footer>

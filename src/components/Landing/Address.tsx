@@ -7,6 +7,7 @@ import { HeaderTitle } from '../../shared/HeaderTitle';
 type Props = {
   id: string,
   data: any,
+  city: string,
 }
 
 const AddressWrapper = styled.div`
@@ -47,7 +48,7 @@ const Location = styled.h5`
 `;
 
 
-const LandingAddress = ({ id, data }: Props) => {
+const LandingAddress = ({ id, data, city }: Props) => {
   return (
     <ScrollOverPack id={id} component={AddressWrapper}>
       <QueueAnim
@@ -60,8 +61,8 @@ const LandingAddress = ({ id, data }: Props) => {
           <HeaderTitle title={data.heading} id={id} />
         </div>
         <Content key="p">
-          <Name>{data.nameAddress}</Name>
-          <Location>{data.location}</Location>
+          <Name>{data[city].address}</Name>
+          <Location>{data[city].location}</Location>
         </Content>
       </QueueAnim>
     </ScrollOverPack>
