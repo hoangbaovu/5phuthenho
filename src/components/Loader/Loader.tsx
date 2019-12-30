@@ -38,7 +38,7 @@ const LoaderLogo = styled.div`
 `;
 
 const LoaderDescription = styled.h2`
-  font-family: ${props => props.theme.typography.fontFamilySecondary};
+  font-family: ${props => props.theme.typography.fontFamilyDefaultSystem};
   font-size: 1.6em;
 `;
 
