@@ -28,6 +28,23 @@ export const LandingNavbarData = {
   ]
 }
 
+export const LandingCarouselData = {
+  data: [
+    {
+      title: 'Carousel 1',
+      image: '../../../assets/carousel/carousel-1.jpg',
+    },
+    {
+      title: 'Carousel 2',
+      image: '../../../assets/carousel/carousel-2.jpg',
+    },
+    {
+      title: 'Carousel 3',
+      image: '../../../assets/carousel/carousel-3.jpg',
+    },
+  ]
+}
+
 export const LandingGuestsData = {
   heading: 'Khách mời',
   data: [

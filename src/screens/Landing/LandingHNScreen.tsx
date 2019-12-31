@@ -7,6 +7,7 @@ import {
   LandingNavbarData,
   LandingAddressData,
   LandingSponsorData,
+  LandingCarouselData,
 } from '../../components/Landing/data.landing';
 
 import {
@@ -37,7 +38,7 @@ const LandingHNScreen = () => {
         <LandingBanner />
         <Content>
           <LandingIntroduction key="introduction" id="introduction" />
-          <LandingCarousel key="carousel" id="carousel" />      
+          <LandingCarousel key="carousel" id="carousel" data={LandingCarouselData} />      
           <LandingRules key="rules" id="rules" />
           <LandingGuests key="guests" id="guests" data={LandingGuestsData} />
           <LandingTimeline key="timeline" id="timeline" data={LandingTimeLineData} />
