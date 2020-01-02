@@ -5,6 +5,7 @@ import QueueAnim from 'rc-queue-anim';
 import { HeaderTitleLarge } from '../../shared/HeaderTitle';
 import styled from 'styled-components';
 import RevealImage from '../../shared/AniImage/RevealImage';
+import { NavLink } from "react-router-dom";
 
 type Props = {
   id: string
@@ -66,6 +67,15 @@ const LandingIntroduction = ({ id }: Props) => {
                   <br />
                   Chúng tôi gọi đó là duyên! Bạn đã sẵn sàng cho một tháng 12 ngọt ngào?
                 </IntroductionParagraph>
+                <NavLink
+                  to='/ticket'
+                  exact
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "red"
+                  }}>
+                  Get Ticket
+                </NavLink>
               </IntroductionLeft>
             </Col>
           </Row>
