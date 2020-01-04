@@ -12,14 +12,12 @@ const Ticket = () => {
       <br />
       <br />
 
-      
       <Row type="flex" justify="center">
-      <Col lg={6}>
-          <Card title="Đăng ký" bordered={false}>
+        <Col xs={22} sm={22} md={22} lg={6}>
+          <Card title="Đăng ký" bordered={true}>
             <TicketForm />
           </Card>
-          </Col>
-
+        </Col>
       </Row>
     </>
   )
