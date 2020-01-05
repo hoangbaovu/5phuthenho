@@ -1,9 +1,14 @@
 import React from 'react';
-import { Button, Input, Form, Icon, Radio, DatePicker } from "antd";
-import { Form as FormikForm, Field, ErrorMessage } from "formik";
-import moment from 'moment';
+import { Button, Input, Form, Icon, Radio, DatePicker, Checkbox } from "antd";
+// import { Form as FormikForm, Field, ErrorMessage } from "formik";
+import { Field, ErrorMessage } from "formik";
+import styled from 'styled-components';
 
 const dateFormat = 'DD/MM/YYYY';
+
+const CustomeErrorMessage = styled.span`
+  color: red;
+`
 
 const InnerForm = ({
   props,
@@ -15,9 +20,41 @@ const InnerForm = ({
   isSubmitting,
   handleSubmit,
 }: any) => {
+
+  const formItemLayout = {
+    labelCol: {
+      xs: { span: 24 },
+      sm: { span: 8 },
+    },
+    wrapperCol: {
+      xs: { span: 24 },
+      sm: { span: 16 },
+    },
+  };
+
+  const tailFormItemLayout = {
+    wrapperCol: {
+      xs: {
+        span: 24,
+        offset: 0,
+      },
+      sm: {
+        span: 16,
+        offset: 8,
+      },
+    },
+  };
+  
   return (
-    <FormikForm onSubmit={handleSubmit}>
-      <Form.Item label="Họ và tên">
+    <Form onSubmit={handleSubmit} {...formItemLayout}>
+
+      <Form.Item
+        label="Họ và tên"
+        validateStatus={errors.fullname && touched.fullname ? (
+          'error'
+        ) : (
+          'success'
+        )}>
         <Field
           name="fullname"
           placeholder="Nhập họ và tên"
@@ -26,10 +63,10 @@ const InnerForm = ({
             ({ field }: any) => <Input prefix={<Icon type="user" />} {...field} />
           }
         </Field>
-        <ErrorMessage name="fullname" />
+        <ErrorMessage component={CustomeErrorMessage} name="fullname" />
       </Form.Item>
 
-      <Form.Item label="Ngày tháng năm sinh (chỉ nhận hồ sơ của các bạn có độ tuổi từ 18-39)">
+      <Form.Item label="Ngày tháng năm sinh" extra="(Chỉ nhận hồ sơ có độ tuổi từ 18-39)">
         <Field
           name="birthday"
           placeholder="Nhập ngày tháng năm sinh"
@@ -43,13 +80,14 @@ const InnerForm = ({
               value={values.birthday}
               placeholder="Nhập ngày sinh"
               showToday={false}
+              style={{ width: '100%' }}
             />
           }
         </Field>
-        <ErrorMessage name="birthday" />
+        <ErrorMessage component={CustomeErrorMessage} name="birthday" />
       </Form.Item>
 
-      <Form.Item label="Bạn là ...">
+      <Form.Item label="Bạn là">
         <Field
           name="gender"
         >
@@ -73,15 +111,43 @@ const InnerForm = ({
             }
           }
         </Field>
-        <ErrorMessage name="gender" />
+        <ErrorMessage component={CustomeErrorMessage} name="gender" />
       </Form.Item>
-      <Form.Item>
-        <Button htmlType="submit" type="primary" disabled={isSubmitting}>
-          Submit
-          </Button>
+
+      <Form.Item {...tailFormItemLayout}>
+        
+        <Field
+          name="agreement"
+        >
+          {
+            ({ field }: any) => {
+              return (
+                <Checkbox
+                  {...field}
+                  onChange={value => setFieldValue("agreement", value.target.checked)}
+                  onBlur={() => setFieldTouched("agreement", true)}
+                  checked={values.agreement}
+                >
+                  {errors.agreement && touched.agreement ? (
+                    <span style={{ color: 'red'}}>Tôi cam kết rằng tôi nằm trong độ tuổi từ 18-39 hoàn toàn phù hợp để tham gia chương trình</span>
+                  ) : (
+                    <>Tôi cam kết rằng tôi nằm trong độ tuổi từ 18-39 hoàn toàn phù hợp để tham gia chương trình</>
+                  )}
+                </Checkbox>
+              )
+            }
+          }
+        </Field>
+        
+      </Form.Item>
+
+      <Form.Item {...tailFormItemLayout}>
+        <Button type="primary" htmlType="submit" disabled={isSubmitting}>
+        Submit
+        </Button>
       </Form.Item>
       <pre>{JSON.stringify(values, null, 2)}</pre>
-    </FormikForm>
+    </Form>
   );
 };
 
