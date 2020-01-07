@@ -26,6 +26,10 @@ const SignupSchema = Yup.object().shape({
     .number()
     .required('Hãy nhập số điện thoại liên lạc')
     .max(12, "Số điện thoại không được lớn hơn 12 số"),
+  facebook: Yup
+    .string()
+    .required('Hãy nhập địa chỉ facebook')
+    .max(51, "Địa chỉ facebook không lớn hơn 51 kí tự"),
 });
 
 const dateFormat = 'DD/MM/YYYY';
@@ -36,13 +40,14 @@ message.config({
 });
 
 const TicketForm = withFormik({
-  mapPropsToValues({ fullname, gender, birthday, agreement, phonenumber }: any) {
+  mapPropsToValues({ fullname, gender, birthday, agreement, phonenumber, facebook }: any) {
     return {
       fullname: fullname || "",
       gender: gender || "male",
       birthday: birthday || moment(new Date(), dateFormat),
       agreement: agreement || false,
       phonenumber: phonenumber || "",
+      facebook: facebook || "",
     };
   },
   validationSchema: SignupSchema,

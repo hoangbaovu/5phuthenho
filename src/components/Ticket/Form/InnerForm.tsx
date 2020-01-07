@@ -19,7 +19,7 @@ const steps = [
   },
   {
     id: 2,
-    title: 'Second',
+    title: 'Đặt vé',
   }
 ];
 
@@ -68,7 +68,7 @@ const InnerForm = ({
                 placeholder="Nhập họ và tên"
               >
                 {
-                  ({ field }: any) => <Input prefix={<Icon type="user" />} {...field} />
+                  ({ field }: any) => <Input size="large" prefix={<Icon type="user" />} {...field} />
                 }
               </Field>
               <ErrorMessage component={CustomeErrorMessage} name="fullname" />
@@ -80,7 +80,7 @@ const InnerForm = ({
                 placeholder="Nhập ngày tháng năm sinh"
               >
                 {
-                  ({ field }: any) => <DatePicker
+                  ({ field }: any) => <DatePicker size="large"
                     {...field}
                     onChange={(value: string) => setFieldValue("birthday", value)}
                     onBlur={() => setFieldTouched("birthday", true)}
@@ -107,19 +107,38 @@ const InnerForm = ({
                         onChange={value => setFieldValue("gender", value.target.value)}
                         onBlur={() => setFieldTouched("gender", true)}
                         value={values.gender}
+                        size="large"
                       >
                         <Radio key={1} value="male">
                           Nam
-                          </Radio>
+                        </Radio>
                         <Radio key={2} value="female">
                           Nữ
-                          </Radio>
+                        </Radio>
                       </Radio.Group>
                     )
                   }
                 }
               </Field>
               <ErrorMessage component={CustomeErrorMessage} name="gender" />
+            </Form.Item>
+
+            <Form.Item
+              label="Link facebook của bạn"
+              validateStatus={errors.facebook && touched.facebook ? (
+                'error'
+              ) : (
+                  'success'
+                )}
+            >
+              <Field
+                name="facebook"
+              >
+                {
+                  ({ field }: any) => <Input size="large" placeholder="facebook.com/5phuthenho" prefix={<Icon type="facebook" theme="filled" />} {...field} />
+                }
+              </Field>
+              <ErrorMessage component={CustomeErrorMessage} name="facebook" />
             </Form.Item>
 
             <Form.Item>
