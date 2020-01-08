@@ -46,7 +46,6 @@ const InnerForm = ({
 
   return (
     <Form onSubmit={handleSubmit}>
-
       <Steps current={current}>
         {steps.map(item => (
           <Step key={item.title} title={item.title} />
